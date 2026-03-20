@@ -17,7 +17,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
 
-
       - name: Install fontawesome6
         run: |
           sudo mkdir -p /usr/share/texmf/tex/latex/fontawesome6
@@ -37,7 +36,7 @@ jobs:
           name: resume-pdf
           path: YuanshuoDu_Resume.pdf
 
-	deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     permissions:
