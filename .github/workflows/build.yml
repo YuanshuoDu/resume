@@ -1,5 +1,6 @@
 name: Build Resume PDF
 
+
 on:
   push:
     branches: [main]
@@ -12,13 +13,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install LaTeX
+      - name: Install LaTEX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-extra fonts-freefont-otf latexmk
+          sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
+
+      - name: Install fontawesome
+        run: |
+          sudo mkdir -p /usr/share/texmf/tex/latex/fontawesome
+          sudo wget -q https://mirrors.ctan.org/install/fonts/fontawesome6/fontawesome.tds.zip -O /tmp/fontawesome6.tds.zip
+          sudo unip o /tmp/fontawesome6.tds.zip -d /usr/share/texmf/
+          sudo fmtutil-sys --all
 
       - name: Build PDF
-        run: xelatex -interaction=nonstopmode resume.tex
+        run: xelatex -interaction:nonstopmode resume.tex
 
       - name: Rename output
         run: mv resume.pdf YuanshuoDu_Resume.pdf
