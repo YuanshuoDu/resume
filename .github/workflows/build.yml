@@ -12,13 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install LaTeX and fontawesome5
+      - name: Install tectonic
         run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-extra fonts-freefont-otf latexmk fontawesome5
+          curl --proto '=https' --tlsv1.2 -sSf https://tectonic.doi.org/latest/tectonic.linux-x86_64.tar.gz | tar xzf - -C /usr/local/bin tectonic
+          chmod +x /usr/local/bin/tectonic
 
       - name: Build PDF
-        run: xelatex -interaction=nonstopmode resume.tex
+        run: /usr/local/bin/tectonic resume.tex --outdir .
 
       - name: Rename output
         run: mv resume.pdf YuanshuoDu_Resume.pdf
