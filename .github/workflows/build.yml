@@ -15,26 +15,64 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
+          sudo apt-get install -y texlive-xetex texlive-fonts-extra fonts-freefont-otf latexmk
 
-      - name: Install fontawesome6
+      - name: Install fontawesome6 via tlmgr
         run: |
-          sudo mkdir -p /usr/share/texmf/tex/latex/fontawesome6
-          sudo wget -q https://mirrors.ctan.org/install/fonts/fontawesome6/fontawesome6.tds.zip -O /tmp/fontawesome6.tds.zip
-          sudo unzip -o /tmp/fontawesome6.tds.zip -d /usr/share/texmf/
-          sudo fmtutil-sys --all
+          sudo apt-get install -y texlive-base
+          if command -v tlmgr &> /dev/null; then
+            sudo tlmgr install fontawesome6 2>&1 || echo "tlmgr install failed"
+          else
+            echo "tlmgr not found"
+          fi
+
+      - name: Install fontawesome6 via direct download
+        run: |
+          sudo mkdir -p /tmp/fa6 /usr/share/texmf/tex/latex/fontawesome6
+          cd /tmp/fa6
+          curl -L -o fontawesome6.tds.zip --max-time 60 \
+            "https://mirrors.ctan.org/install/fonts/fontawesome6/fontawesome6.tds.zip" 2>&1 || \
+          wget -q fontawesome6.tds.zip --timeout=60 \
+            "https://mirrors.ctan.org/install/fonts/fontawesome6/fontawesome6.tds.zip" 2>&1 || \
+          echo "Download failed"
+          ls -la /tmp/fa6/
+
+      - name: Extract and install fontawesome6
+        run: |
+          cd /tmp/fa6
+          if [ -f fontawesome6.tds.zip ]; then
+            sudo unzip -o fontawesome6.tds.zip -d /usr/share/texmf/ 2>&1
+            sudo fmtutil-sys --all 2>&1 || echo "fmtutil failed"
+          else
+            echo "No zip file found"
+          fi
+
+      - name: Verify fontawesome6
+        run: |
+          find /usr/share/texmf -name "fontawesome6*" 2>/dev/null | head -10
+          kpsewhich fontawesome6.sty 2>/dev/null || echo "not found via kpsewhich"
 
       - name: Build PDF
-        run: xelatex -interaction=nonstopmode resume.tex
+        run: |
+          xelatex -interaction=nonstopmode resume.tex 2>&1 | tail -20
+          xelatex -interaction=nonstopmode resume.tex 2>&1 | tail -5
 
       - name: Rename output
-        run: mv resume.pdf YuanshuoDu_Resume.pdf
+        run: |
+          if [ -f resume.pdf ]; then
+            mv resume.pdf YuanshuoDu_Resume.pdf
+          else
+            echo "ERROR: resume.pdf not found"
+            ls -la *.pdf *.log 2>/dev/null || true
+          fi
 
       - name: Upload artifact
+        if: runner.os == 'Linux'
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
           path: YuanshuoDu_Resume.pdf
+          retention-days: 1
 
   deploy:
     needs: build
