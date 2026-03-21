@@ -23,13 +23,15 @@ jobs:
       - name: Build PDF
         run: xelatex -interaction=nonstopmode resume.tex
 
-      - name: Rename
-        run: mv resume.pdf YuanshuoDu_Resume.pdf
+      - name: Prepare artifact
+        run: |
+          mkdir -p resume-artifact
+          mv resume.pdf resume-artifact/YuanshuoDu_Resume.pdf
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: YuanshuoDu_Resume.pdf
+          path: ./resume-artifact
 
       - name: Deploy to GitHub Pages
         id: deployment
