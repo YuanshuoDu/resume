@@ -12,27 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install LaTeX and fonts
+      - name: Install LaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
 
-      - name: Clone font packages
-        run: |
-          mkdir -p ~/texmf/tex/latex
-
-          # Clone latex-fontawesome5 (has fontawesome5.sty + fonts)
-          git clone --depth=1 https://github.com/JanHendrikDolling/latex-fontawesome5.git ~/texmf/tex/latex/fontawesome5
-
-          # Clone latex-sourcesanspro (has SourceSans3 fonts)
-          git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git ~/texmf/tex/latex/sourcesanspro
-
       - name: Build PDF
-        env:
-          TEXMFHOME: ${{ github.workspace }}/texmf
-        run: |
-          export TEXMFHOME="$GITHUB_WORKSPACE/texmf"
-          xelatex -interaction=nonstopmode resume.tex
+        run: xelatex -interaction=nonstopmode resume.tex
 
       - name: Rename output
         run: mv resume.pdf YuanshuoDu_Resume.pdf
