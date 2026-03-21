@@ -12,10 +12,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
+
       - name: Clone fontawesome5
         run: |
-          cd /usr/share/texmf/tex/latex
-          sudo git clone https://github.com/posquit0/latex-fontawesome.git fontawesome5
+          cd $HOME
+          git clone --depth=1 https://github.com/posquit0/latex-fontawesome.git
+          sudo cp -r latex-fontawesome /usr/share/texmf/tex/latex/fontawesome5
+
+      - name: Clone sourcesanspro
+        run: |
+          cd $HOME
+          git clone --depth=1 https://github.com/ianspdf/sourcesanspro.git
+          sudo cp -r sourcesanspro /usr/share/texmf/tex/latex/sourcesanspro
+          sudo cp -r sourcesanspro/source /usr/share/texmf/tex/latex/sourcesanspro/ 2>/dev/null || true
+
+      - name: Update TeXMF database
+        run: |
+          sudo mktexlsr /usr/share/texmf
+          sudo texhash /usr/share/texmf
 
       - name: Build PDF
         run: xelatex -interaction=nonstopmode resume.tex
