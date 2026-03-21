@@ -1,14 +1,14 @@
-%% fontawesome5.sty wrapper - uses system FontAwesome 4
+%% fontawesome5.sty - uses system FontAwesome 4 font
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome5}[2024 FA5 wrapper for FA4]
+\ProvidesPackage{fontawesome5}[2024 FA5 using system FA4]
 
 \RequirePackage{fontspec}
 \RequirePackage{accsupp}
 
-% Use system FontAwesome font by full path
+% Use full path to FontAwesome - works with both xelatex and lualatex
 \newfontfamily\FAFamily{/usr/share/fonts/opentype/font-awesome/FontAwesome}
 
-% \faAlt{template}{icon}{text} -> icon followed by text  
+% \faAlt{template}{icon}{text}
 \def\faAlt#1#2#3{%
   \BeginAccSupp{ActualText={#1}}#2#3\EndAccSupp}
 
@@ -38,6 +38,7 @@
 \def\faOrcid{{\FAFamily\symbol{"F337}}}
 \def\faPaperPlane{{\FAFamily\symbol{"F1D8}}}
 \def\faPaperPlaneO{{\FAFamily\symbol{"F1D9}}}
+\def\faPhone{{\FAFamily\symbol{"F095}}}
 \def\faReddit{{\FAFamily\symbol{"F281}}}
 \def\faRedditAlien{{\FAFamily\symbol{"F281}}}
 \def\faRedditSquare{{\FAFamily\symbol{"F281}}}
