@@ -12,16 +12,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install LaTeX
+      - name: Install LaTeX and fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
 
-      - name: Clone font packages to repo
+      - name: Clone font packages
         run: |
-          mkdir -p texmf/tex/latex
-          git clone --depth=1 https://github.com/posquit0/latex-fontawesome.git texmf/tex/latex/fontawesome5
-          git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git texmf/tex/latex/sourcesanspro
+          mkdir -p ~/texmf/tex/latex
+
+          # Clone latex-fontawesome5 (has fontawesome5.sty + fonts)
+          git clone --depth=1 https://github.com/JanHendrikDolling/latex-fontawesome5.git ~/texmf/tex/latex/fontawesome5
+
+          # Clone latex-sourcesanspro (has SourceSans3 fonts)
+          git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git ~/texmf/tex/latex/sourcesanspro
 
       - name: Build PDF
         env:
