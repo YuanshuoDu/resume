@@ -1,43 +1,39 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass{simpleresume}
 
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-
-\colorlet{awesome}{awesome-skyblue}
-\setbool{acvSectionColorHighlight}{true}
-%\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
-
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-\name{Yuanshuo}{Du}
-
-\mobile{+353 89 454 6468}
-\email{duyuanshuo@gmail.com}
-\homepage{github.com/YuanshuoDu}
-\github{YuanshuoDu}
-\linkedin{linkedin.com/in/yuanshuodu}
-%\whatsapp{+353 89 454 6468}
-
-\quote{``Reliable, results-driven Software Engineer committed to end-to-end ownership of high-impact solutions."}
-
-%-------------------------------------------------------------------------------
 \begin{document}
 
-\makecvheader[C]
+\begin{center}
+{\LARGE\bfseries Yuanshuo Du} \par
+\vspace{0.15cm}
+{\small Phone: +353 89 454 6468 \quad Email: duyuanshuo@gmail.com \quad GitHub: github.com/YuanshuoDu}
+\end{center}
 
-\makecvfooter
-  {\today}
-  {Yuanshuo Du~~~·~~~Resume}
-  {\thepage}
+\section{Summary}
+Reliable Software Engineer with expertise in Python, AI, cloud architecture (Azure/Kubernetes), and PostgreSQL.
 
-\input{resume/summary.tex}
-\input{resume/skills.tex}
-\input{resume/experience.tex}
-\input{resume/education.tex}
-\input{resume/projects.tex}
-\input{resume/certifications.tex}
+\section{Skills}
+Python, JavaScript, TypeScript, SQL, Bash \par
+React, Node.js, FastAPI, Django, Express.js \par
+Azure, Kubernetes, Docker, Terraform, CI/CD \par
+PostgreSQL, Redis, MongoDB
+
+\section{Experience}
+\textbf{Security Engineer} -- InsightSec, Shanghai \hfill Jan 2022 -- Sep 2024 \par
+Penetration testing; Python automation; ISO 27001 compliance.
+
+\textbf{Teaching Assistant} -- TU Dublin \hfill Sep 2023 -- Dec 2024 \par
+Teaching Advanced Software Architecture and DevOps.
+
+\section{Education}
+MSc Computer Science -- TU Dublin \hfill 2023-2024 (Merit) \par
+MBA International Business -- SHUIBE \hfill 2019-2021 \par
+BA English and American Literature -- SISU \hfill 2015-2019
+
+\section{Projects}
+Resume Website -- GitHub Actions automated PDF \par
+Secure Cloud Migration -- Azure Kubernetes
+
+\section{Certifications}
+ISO 27001 Lead Auditor; Azure Fundamentals (AZ-900)
 
 \end{document}
