@@ -161,11 +161,11 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA{/usr/share/fonts/opentype/font-awesome/FontAwesome}
+\newfontfamily\FA{FontAwesome}
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont{/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Regular.ttf}
+\newfontfamily\headerfont{Roboto-Regular}
 
-\newfontfamily\headerfontlight{/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Thin.ttf}
+\newfontfamily\headerfontlight{Roboto-Thin}
 
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
