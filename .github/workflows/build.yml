@@ -17,14 +17,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
 
-      - name: Clone font packages to TEXMFHOME
+      - name: Clone font packages to repo
         run: |
-          mkdir -p ~/texmf/tex/latex
-          git clone --depth=1 https://github.com/posquit0/latex-fontawesome.git ~/texmf/tex/latex/fontawesome5
-          git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git ~/texmf/tex/latex/sourcesanspro
+          mkdir -p texmf/tex/latex
+          git clone --depth=1 https://github.com/posquit0/latex-fontawesome.git texmf/tex/latex/fontawesome5
+          git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git texmf/tex/latex/sourcesanspro
 
       - name: Build PDF
-        run: xelatex -interaction=nonstopmode resume.tex
+        env:
+          TEXMFHOME: ${{ github.workspace }}/texmf
+        run: |
+          export TEXMFHOME="$GITHUB_WORKSPACE/texmf"
+          xelatex -interaction=nonstopmode resume.tex
 
       - name: Rename output
         run: mv resume.pdf YuanshuoDu_Resume.pdf
