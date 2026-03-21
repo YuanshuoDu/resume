@@ -17,10 +17,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
 
-      - name: Clone font packages
+      - name: Clone font packages to TEXMFHOME
         run: |
-          sudo git clone --depth=1 https://github.com/posquit0/latex-fontawesome.git /usr/share/texmf/tex/latex/fontawesome5
-          sudo git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git /usr/share/texmf/tex/latex/sourcesanspro
+          mkdir -p ~/texmf/tex/latex
+          git clone --depth=1 https://github.com/posquit0/latex-fontawesome.git ~/texmf/tex/latex/fontawesome5
+          git clone --depth=1 https://github.com/silkeh/latex-sourcesanspro.git ~/texmf/tex/latex/sourcesanspro
 
       - name: Build PDF
         run: xelatex -interaction=nonstopmode resume.tex
