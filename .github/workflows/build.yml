@@ -12,10 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install LaTeX
+      - name: Install LaTeX and fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk
+          sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk fonts-font-awesome
+          # Copy FontAwesome font to texmf so xelatex can find it
+          sudo mkdir -p /usr/share/texmf/fonts/opentype/font-awesome
+          sudo cp /usr/share/fonts/opentype/font-awesome/FontAwesome.otf /usr/share/texmf/fonts/opentype/font-awesome/
+          sudo mktexlsr /usr/share/texmf
 
       - name: Build PDF
         run: xelatex -interaction=nonstopmode resume.tex
