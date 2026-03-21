@@ -15,13 +15,10 @@ jobs:
       - name: Install LaTeX and fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex fonts-freefont-otf latexmk fonts-font-awesome
-          # Refresh font cache so xelatex can find FontAwesome
-          sudo fc-cache -f
-          sudo mktexlsr /usr/share/texmf
+          sudo apt-get install -y texlive-lualatex fonts-freefont-otf latexmk fonts-font-awesome
 
       - name: Build PDF
-        run: xelatex -interaction=nonstopmode resume.tex
+        run: lualatex -interaction=nonstopmode resume.tex
 
       - name: Rename output
         run: mv resume.pdf YuanshuoDu_Resume.pdf
