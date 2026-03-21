@@ -4,12 +4,8 @@
 
 \RequirePackage{fontspec}
 
-% Handle options - [default,opentype] etc are ignored
-\DeclareOption{default}{\typeout{Using FreeSans for SourceSansPro}}
-\DeclareOption{opentype}{\typeout{Using FreeSans for SourceSansPro (opentype)}}
-\DeclareOption{type1}{\typeout{Using FreeSans for SourceSansPro (type1)}}
-\DeclareOption{scaled}[1]{\typeout{Using FreeSans for SourceSansPro (scaled=#1)}}
-\DeclareOption{scaled=}{\typeout{Using FreeSans for SourceSansPro (scaled)}}
+% Silently ignore all options (like [default,opentype])
+\DeclareOption*{}
 \ProcessOptions\relax
 
 % Use FreeSans as substitute
