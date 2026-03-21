@@ -1,0 +1,19 @@
+%% Custom sourcesanspro.sty - uses FreeSans as substitute
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sourcesanspro}[2024 Custom sourcesanspro using FreeSans]
+
+\RequirePackage{fontspec}
+
+% Use FreeSans as substitute for SourceSansPro
+\setmainfont{FreeSans}
+\setsansfont{FreeSans}
+
+% Define the commands that awesome-cv.cls expects
+\let\sourcesanspro\rmfamily
+\let\sourcesansprolight\rmfamily
+\let\sourcesansprobold\rmfamily
+\let\sourcesansproit\rmfamily
+\let\sourcesansprobfit\rmfamily
+\let\sourcesanspromedium\rmfamily
+
+\endinput
