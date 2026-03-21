@@ -12,15 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install LaTeX and fonts
+      - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-luatex texlive-xetex fonts-freefont-otf latexmk fonts-font-awesome
-          # Refresh font cache
-          sudo fc-cache -f -v
+          sudo apt-get install -y texlive-xetex latexmk
 
       - name: Build PDF
-        run: lualatex -interaction=nonstopmode resume.tex
+        run: xelatex -interaction=nonstopmode resume.tex
 
       - name: Rename output
         run: mv resume.pdf YuanshuoDu_Resume.pdf
