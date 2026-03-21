@@ -20,7 +20,7 @@ jobs:
       - name: Build PDF
         run: xelatex -interaction=nonstopmode resume.tex
 
-      - name: Rename output
+      - name: Rename
         run: mv resume.pdf YuanshuoDu_Resume.pdf
 
       - name: Upload artifact
@@ -33,12 +33,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.page_url }}
+      contents: write
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -46,14 +41,12 @@ jobs:
           name: resume-pdf
           path: .
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit PDF to gh-pages
+        run: |
+          git config --global user.email "ci@github.com"
+          git config --global user.name "GitHub Actions"
+          git checkout gh-pages || git checkout --orphan gh-pages
+          cp YuanshuoDu_Resume.pdf index.pdf
+          git add index.pdf
+          git commit -m "Update resume PDF [skip ci]"
+          git push origin gh-pages --force
