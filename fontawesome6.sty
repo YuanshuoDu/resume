@@ -1,20 +1,21 @@
-%% fontawesome6.sty - uses system FontAwesome 4 font
+%% fontawesome6.sty - uses system FontAwesome 4 font (system fonts-font-awesome package)
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome6}[2024 FA6 wrapper for FA4]
+\ProvidesPackage{fontawesome6}[2024 FA6 using system FontAwesome 4]
 
 \RequirePackage{fontspec}
 \RequirePackage{accsupp}
 
-% Define the FontAwesome font family
+% Use system FontAwesome font - xelatex can find it via fc-list
 \newfontfamily\FAFamily{FontAwesome}
 
 % \faAlt{template}{icon}{text} -> icon followed by text
 \def\faAlt#1#2#3{%
   \BeginAccSupp{ActualText={#1}}#2#3\EndAccSupp}
 
-% Icon shortcuts
+% All icon definitions using FontAwesome 4 Unicode mapping
 \def\faBirthdayCake{{\FAFamily\symbol{"F1FD}}}
 \def\faBitbucket{{\FAFamily\symbol{"F171}}}
+\def\faBitbucketSquare{{\FAFamily\symbol{"F171}}}
 \def\faCakeCandles{{\FAFamily\symbol{"F1FD}}}
 \def\faEnvelope{{\FAFamily\symbol{"F0E0}}}
 \def\faEnvelopeO{{\FAFamily\symbol{"F003}}}
@@ -38,6 +39,7 @@
 \def\faOrcid{{\FAFamily\symbol{"F337}}}
 \def\faPaperPlane{{\FAFamily\symbol{"F1D8}}}
 \def\faPaperPlaneO{{\FAFamily\symbol{"F1D9}}}
+\def\faPhone{{\FAFamily\symbol{"F095}}}
 \def\faReddit{{\FAFamily\symbol{"F281}}}
 \def\faRedditAlien{{\FAFamily\symbol{"F281}}}
 \def\faRedditSquare{{\FAFamily\symbol{"F281}}}
