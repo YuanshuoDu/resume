@@ -15,7 +15,7 @@ jobs:
       - name: Install LaTeX and fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-lualatex fonts-freefont-otf latexmk fonts-font-awesome
+          sudo apt-get install -y texlive-luatex fonts-freefont-otf latexmk fonts-font-awesome
 
       - name: Build PDF
         run: lualatex -interaction=nonstopmode resume.tex
