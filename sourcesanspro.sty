@@ -4,16 +4,28 @@
 
 \RequirePackage{fontspec}
 
-% Use FreeSans as substitute for SourceSansPro
+% Handle options - [default,opentype] etc are ignored
+\DeclareOption{default}{\typeout{Using FreeSans for SourceSansPro}}
+\DeclareOption{opentype}{\typeout{Using FreeSans for SourceSansPro (opentype)}}
+\DeclareOption{type1}{\typeout{Using FreeSans for SourceSansPro (type1)}}
+\DeclareOption{scaled}[1]{\typeout{Using FreeSans for SourceSansPro (scaled=#1)}}
+\DeclareOption{scaled=}{\typeout{Using FreeSans for SourceSansPro (scaled)}}
+\ProcessOptions\relax
+
+% Use FreeSans as substitute
 \setmainfont{FreeSans}
 \setsansfont{FreeSans}
 
-% Define the commands that awesome-cv.cls expects
-\let\sourcesanspro\rmfamily
-\let\sourcesansprolight\rmfamily
-\let\sourcesansprobold\rmfamily
-\let\sourcesansproit\rmfamily
-\let\sourcesansprobfit\rmfamily
-\let\sourcesanspromedium\rmfamily
+% Define font switching commands
+\let\sourcesanspro\sffamily
+\let\sourcesansprolight\sffamily
+\let\sourcesansprobold\sffamily
+\let\sourcesansproit\sffamily
+\let\sourcesansprobfit\sffamily
+\let\sourcesanspromedium\sffamily
+
+% Source Sans Pro aliases
+\newfontfamily\SourceSansPro{FreeSans}
+\newfontfamily\SourceSansProLight{FreeSans}
 
 \endinput
