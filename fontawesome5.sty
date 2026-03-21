@@ -1,18 +1,18 @@
-%% fontawesome6.sty - uses system FontAwesome 4 font
+%% fontawesome5.sty wrapper - uses system FontAwesome 4
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome6}[2024 FA6 wrapper for FA4]
+\ProvidesPackage{fontawesome5}[2024 FA5 wrapper for FA4]
 
 \RequirePackage{fontspec}
 \RequirePackage{accsupp}
 
-% Define the FontAwesome font family
-\newfontfamily\FAFamily{FontAwesome}
+% Use system FontAwesome font by full path
+\newfontfamily\FAFamily{/usr/share/fonts/opentype/font-awesome/FontAwesome}
 
-% \faAlt{template}{icon}{text} -> icon followed by text
+% \faAlt{template}{icon}{text} -> icon followed by text  
 \def\faAlt#1#2#3{%
   \BeginAccSupp{ActualText={#1}}#2#3\EndAccSupp}
 
-% Icon shortcuts
+% All icon definitions
 \def\faBirthdayCake{{\FAFamily\symbol{"F1FD}}}
 \def\faBitbucket{{\FAFamily\symbol{"F171}}}
 \def\faCakeCandles{{\FAFamily\symbol{"F1FD}}}
