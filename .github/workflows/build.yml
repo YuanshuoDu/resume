@@ -18,10 +18,12 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex latexmk
+          sudo apt-get install -y texlive-xetex latexmk fonts-freefont-otf
 
       - name: Build PDF
-        run: xelatex -interaction=nonstopmode resume.tex
+        run: |
+          xelatex -interaction=nonstopmode resume.tex
+          xelatex -interaction=nonstopmode resume.tex
 
       - name: Prepare artifact
         run: |
@@ -29,7 +31,7 @@ jobs:
           mv resume.pdf resume-artifact/YuanshuoDu_Resume.pdf
 
       - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./resume-artifact
 
