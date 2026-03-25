@@ -13,15 +13,14 @@
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 
-\geometry{a4paper,left=1.8cm,top=1.6cm,right=1.8cm,bottom=1.6cm}
+% Professional color palette - Slate & Blue
+\definecolor{primary}{RGB}{15,23,42}       % Dark slate - headings
+\definecolor{accent}{RGB}{59,130,246}      % Blue 500 - accent
+\definecolor{secondary}{RGB}{100,116,139}  % Slate 500 - secondary
+\definecolor{muted}{RGB}{148,163,184}      % Slate 400 - muted
+\definecolor{rule}{RGB}{226,232,240}       % Slate 200 - dividers
 
-% Refined professional color palette - Tech Blue professional
-\definecolor{primary}{RGB}{15,23,42}       % Dark slate - main headings
-\definecolor{accent}{RGB}{37,99,235}      % Blue 500 - section titles
-\definecolor{secondary}{RGB}{71,85,105}   % Slate 600 - secondary text
-\definecolor{muted}{RGB}{148,163,184}     % Slate 400 - muted text
-\definecolor{rule}{RGB}{203,213,225}       % Slate 300 - dividers
-\definecolor{highlight}{RGB}{239,246,255}  % Blue 50 - subtle highlight
+\geometry{a4paper,left=2cm,top=1.7cm,right=2cm,bottom=1.7cm}
 
 \hypersetup{
     colorlinks=true,
@@ -29,18 +28,16 @@
     urlcolor=accent
 }
 
-% Section title styling with left accent bar effect
-\titleformat{\section}{
-    \Large\bfseries\color{primary}
-}{\thesection}{0.5em}{}
+% Section title - bold with accent underline
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}
 
-\titlespacing*{\section}{0pt}{2ex}{0.8ex}
+\titlespacing*{\section}{0pt}{2ex}{0.6ex}
 
-% Itemize improvements - cleaner, tighter
+% Itemize - clean bullets
 \setlist{noitemsep,topsep=0.1ex,partopsep=0pt}
-\setlist[itemize]{leftmargin=0.9em,label=\color{accent}\textbullet}
+\setlist[itemize]{leftmargin=0.85em,label=\color{accent}\textbullet}
 
-% Command for section divider line
-\newcommand{\sectionrule}{\nopagebreak\vspace{0.1ex}\par\color{accent}\rule{\linewidth}{0.5pt}\vspace{0.2ex}\par}
+% Header rule
+\newcommand{\headerrule}{\vspace{0.25cm}\hrule color{rule}\hrule\vspace{0.35cm}}
 
 \endinput
