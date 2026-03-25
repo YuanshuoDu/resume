@@ -21,11 +21,12 @@
 % Modern Tech Blue — confident, approachable, professional
 \definecolor{primary}{RGB}{15,23,42}       % Deep navy — name, section headings
 \definecolor{accent}{RGB}{37,99,235}      % Vivid blue — bullets, underline, top bar
-\definecolor{accentlight}{RGB}{147,197,253} % Blue-300 — subtle tints
+\definecolor{accentlight}{RGB}{219,234,254} % Blue-100 — subtle header tint
 \definecolor{accentdark}{RGB}{29,78,216}   % Blue-700 — hover states
 \definecolor{secondary}{RGB}{71,85,105}    % Slate-600 — company names, meta
 \definecolor{muted}{RGB}{100,116,139}     % Slate-500 — muted / date labels
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — divider lines
+\definecolor{ruleheavy}{RGB}{37,99,235}   % Accent blue — thick header rule
 \definecolor{headerbar}{RGB}{37,99,235}    % Same accent — top page bar
 \definecolor{surface}{RGB}{248,250,252}   % Slate-50 — subtle background surfaces
 
@@ -46,7 +47,7 @@
 \titleformat{\section}{%
   \large\sffamily\bfseries\color{primary}\raggedright
 }{%
-  \llap{\color{accent}\rule[0.18ex]{3pt}{1.05em}\hspace{0.38em}}% left accent bar
+  \llap{\color{accent}\rule[0.18ex]{3.5pt}{1.15em}\hspace{0.4em}}% left accent bar (thicker)
 }{0em}{}
 \titlespacing*{\section}{0pt}{2.0ex}{0.5ex}
 
@@ -71,10 +72,13 @@
   \nopagebreak\vspace{0.28cm}%
 }
 
-% ── Footer ───────────────────────────────────────────────────────────────────
+% ── Footer: page number + name ───────────────────────────────────────────────
 \fancypagestyle{plain}{%
+  \fancyfoot[L]{\sffamily\scriptsize\color{muted}Yuanshuo Du}
   \fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}
-  \fancyfoot[L,R]{}
+  \fancyfoot[R]{}
+  \fancyfoot[RO]{\color{rule}\rule{\linewidth}{0.4pt}}% top separator on right-odd
+  \fancyfoot[LE]{\color{rule}\rule{\linewidth}{0.4pt}}
   \renewcommand{\headrulewidth}{0pt}
 }
 \pagestyle{plain}
