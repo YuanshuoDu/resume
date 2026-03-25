@@ -13,7 +13,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 
-\geometry{a4paper,left=2cm,top=1.8cm,right=2cm,bottom=1.8cm}
+\geometry{a4paper,left=1.8cm,top=1.6cm,right=1.8cm,bottom=1.6cm}
 
 % Refined professional color palette - Tech Blue professional
 \definecolor{primary}{RGB}{15,23,42}       % Dark slate - main headings
@@ -29,16 +29,18 @@
     urlcolor=accent
 }
 
-% Section title styling - clean with left accent bar
+% Section title styling with left accent bar effect
 \titleformat{\section}{
-    \large\bfseries\color{primary}
+    \Large\bfseries\color{primary}
 }{\thesection}{0.5em}{}
 
-\titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+\titlespacing*{\section}{0pt}{2ex}{0.8ex}
 
-% Itemize improvements - tighter, cleaner bullets
-\setlist{noitemsep,topsep=0.15ex,partopsep=0pt}
-\setlist[itemize]{leftmargin=1em,label=\color{accent}\textbullet}
+% Itemize improvements - cleaner, tighter
+\setlist{noitemsep,topsep=0.1ex,partopsep=0pt}
+\setlist[itemize]{leftmargin=0.9em,label=\color{accent}\textbullet}
 
-% Header styling
+% Command for section divider line
+\newcommand{\sectionrule}{\nopagebreak\vspace{0.1ex}\par\color{accent}\rule{\linewidth}{0.5pt}\vspace{0.2ex}\par}
+
 \endinput
