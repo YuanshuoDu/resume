@@ -7,36 +7,38 @@
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{fontenc}
+\RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern}
-\RequirePackage{textcomp}
 \RequirePackage{microtype}
 \RequirePackage{hyperref}
+\RequirePackage{enumitem}
 
-\geometry{a4paper,left=1.8cm,top=1.5cm,right=1.8cm,bottom=1.5cm}
+\geometry{a4paper,left=2cm,top=1.8cm,right=2cm,bottom=1.8cm}
 
-% Modern color scheme - Deep Navy & Professional
-\definecolor{primary}{RGB}{15,23,42}       % Dark slate - headings
+% Refined professional color palette - Tech Blue professional
+\definecolor{primary}{RGB}{15,23,42}       % Dark slate - main headings
 \definecolor{accent}{RGB}{37,99,235}      % Blue 500 - section titles
-\definecolor{secondary}{RGB}{100,116,139} % Slate 500 - secondary text
-\definecolor{lightbg}{RGB}{248,250,252}   % Slate 50 - subtle bg
-\definecolor{rule}{RGB}{226,232,240}      % Slate 200 - dividers
+\definecolor{secondary}{RGB}{71,85,105}   % Slate 600 - secondary text
+\definecolor{muted}{RGB}{148,163,184}     % Slate 400 - muted text
+\definecolor{rule}{RGB}{203,213,225}       % Slate 300 - dividers
+\definecolor{highlight}{RGB}{239,246,255}  % Blue 50 - subtle highlight
 
 \hypersetup{
     colorlinks=true,
     linkcolor=accent,
-    urlcolor=accent,
-    pdfborderstyle={0 0 0}
+    urlcolor=accent
 }
 
+% Section title styling - clean with left accent bar
 \titleformat{\section}{
-    \Large\bfseries\color{accent}
+    \large\bfseries\color{primary}
 }{\thesection}{0.5em}{}
 
-\titlespacing*{\section}{0pt}{1.2ex}{0.5ex}
+\titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
 
-% Itemize improvements
-\RequirePackage{enumitem}
-\setlist{noitemsep,topsep=0.2ex,partopsep=0pt}
-\setlist[itemize]{leftmargin=1.2em,label=\textbullet}
+% Itemize improvements - tighter, cleaner bullets
+\setlist{noitemsep,topsep=0.15ex,partopsep=0pt}
+\setlist[itemize]{leftmargin=1em,label=\color{accent}\textbullet}
 
+% Header styling
 \endinput
