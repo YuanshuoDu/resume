@@ -29,6 +29,7 @@
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
 \definecolor{headerbar}{RGB}{29,74,196}    % Same accent — top page bar
 \definecolor{surface}{RGB}{248,250,252}    % Slate-50 — subtle surfaces
+\definecolor{surface2}{RGB}{241,245,249}   % Slate-100 — slightly darker surface
 
 % ── Page geometry ────────────────────────────────────────────────────────────
 \geometry{a4paper,left=1.9cm,top=1.6cm,right=1.9cm,bottom=1.6cm}

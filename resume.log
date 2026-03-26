@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.25)  26 MAR 2026 03:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.25)  26 MAR 2026 03:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,12 +337,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 44.
+Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 
 
 Package hyperref Warning: Invalid value `{round}{0}{1}'
 (hyperref)                for option `pdfborderstyle'.
-(hyperref)                Option setting is ignored on input line 44.
+(hyperref)                Option setting is ignored on input line 45.
 
 
 Package microtype Warning: The tracking set `mtc' is undeclared.
@@ -352,7 +352,7 @@ Package microtype Warning: The tracking set `mtc' is undeclared.
 Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less.
 (fancyhdr)                Please consider using the `twoside' option on input l
-ine 90.
+ine 91.
 
 )
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 3.
@@ -499,58 +499,42 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-3.
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-3.
 
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-33.
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
 
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-33.
+ []
 
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 33.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 33.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 33.
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--73
+
+ []
 
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 45.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 86.
 
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 45.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 86.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-9.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+0.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 99.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 99.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/e
-nc/dvips/lm/lm-ec.enc}
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/
+enc/dvips/lm/lm-ec.enc}
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvi
-ps/lm/lm-mathsy.enc}] (./resume.aux)
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [2] (./resume.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -559,24 +543,23 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: 892AF3F6559C02C8668B967A5E40D475;631.
  ) 
 Here is how much of TeX's memory you used:
- 12463 strings out of 476182
- 197219 string characters out of 5795595
- 1945975 words of memory out of 5000000
- 34192 multiletter control sequences out of 15000+600000
- 629684 words of font info for 122 fonts, out of 8000000 for 9000
+ 12315 strings out of 476182
+ 194279 string characters out of 5795595
+ 1951975 words of memory out of 5000000
+ 34088 multiletter control sequences out of 15000+600000
+ 610869 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,11n,93p,1003b,451s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,93p,1003b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy9.pfb>
-Output written on resume.pdf (1 page, 238778 bytes).
+/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on resume.pdf (2 pages, 239418 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 47161 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 103 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 36921 words of extra memory for PDF output out of 42996 (max. 10000000)
 
