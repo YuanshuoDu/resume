@@ -46,6 +46,10 @@
 
 % ── Microtype ─────────────────────────────────────────────────────────────────
 \microtypesetup{protrusion=true,expansion=true,tracking=mtc}
+% xelatex incompatible with expansion/tracking — override
+\@ifpackageloaded{iftex}{
+  \ifXeTeX\microtypesetup{expansion=false,tracking=false}\fi
+}{}
 
 % ── Section titles: left accent bar + subtle background pill ────────────────
 \titleformat{\section}{%
