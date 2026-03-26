@@ -18,12 +18,12 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex latexmk fonts-freefont-otf
+          sudo apt-get install -y texlive latexmk
 
       - name: Build PDF
         run: |
-          xelatex -interaction=nonstopmode resume.tex
-          xelatex -interaction=nonstopmode resume.tex
+          pdflatex -interaction=nonstopmode resume.tex
+          pdflatex -interaction=nonstopmode resume.tex
 
       - name: Prepare artifact
         run: |
