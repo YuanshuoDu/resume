@@ -14,62 +14,68 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{ragged2e}
 
-% ── Font setup: use lmodern for PDFLaTeX compatibility ───────────────────────
+% ── Font setup: lmodern (pdflatex-compatible) + micro-typographic refinements ──
 \RequirePackage{lmodern}
+\RequirePackage{textcomp}% extra symbols companion
 
-% ── Professional color palette ───────────────────────────────────────────────
-% Modern Tech Blue — confident, approachable, professional
-\definecolor{primary}{RGB}{15,23,42}       % Deep navy — name, section headings
-\definecolor{accent}{RGB}{37,99,235}      % Vivid blue — bullets, underline, top bar
-\definecolor{accentlight}{RGB}{219,234,254} % Blue-100 — subtle header tint
-\definecolor{accentdark}{RGB}{29,78,216}   % Blue-700 — hover states
-\definecolor{secondary}{RGB}{71,85,105}    % Slate-600 — company names, meta
-\definecolor{muted}{RGB}{100,116,139}     % Slate-500 — muted / date labels
-\definecolor{rule}{RGB}{226,232,240}       % Slate-200 — divider lines
-\definecolor{ruleheavy}{RGB}{37,99,235}   % Accent blue — thick header rule
-\definecolor{headerbar}{RGB}{37,99,235}    % Same accent — top page bar
-\definecolor{surface}{RGB}{248,250,252}   % Slate-50 — subtle background surfaces
+% ── Refined professional color palette ────────────────────────────────────────
+% Slightly deeper, more refined — better contrast and hierarchy
+\definecolor{primary}{RGB}{10,15,35}       % Deeper navy — name, section headings
+\definecolor{accent}{RGB}{29,74,196}       % Royal blue-700 — bullets, bars, links
+\definecolor{accentlight}{RGB}{239,246,255} % blue-50 — very subtle tint
+\definecolor{accentmid}{RGB}{191,219,254}  % blue-200 — divider accent
+\definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — company, meta
+\definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, muted labels
+\definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
+\definecolor{headerbar}{RGB}{29,74,196}    % Same accent — top page bar
+\definecolor{surface}{RGB}{248,250,252}    % Slate-50 — subtle surfaces
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=2.0cm,top=1.7cm,right=2.0cm,bottom=1.7cm}
+\geometry{a4paper,left=1.9cm,top=1.6cm,right=1.9cm,bottom=1.6cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
   colorlinks=true,
   linkcolor=accent,
-  urlcolor=accent
+  urlcolor=accent,
+  urlbordercolor=accentmid,
+  linkbordercolor=accentmid,
+  pdfborderstyle={round}{0}{1},
 }
 
 % ── Microtype ─────────────────────────────────────────────────────────────────
 \microtypesetup{protrusion=true,expansion=true,tracking=mtc}
 
-% ── Section titles: bold + left accent bar ───────────────────────────────────
+% ── Section titles: left accent bar + subtle background pill ────────────────
 \titleformat{\section}{%
-  \large\sffamily\bfseries\color{primary}\raggedright
+  \normalsize\sffamily\bfseries\color{primary}\raggedright
 }{%
-  \llap{\color{accent}\rule[0.18ex]{3.5pt}{1.15em}\hspace{0.4em}}% left accent bar (thicker)
+  \llap{\color{accent}\rule[0.15ex]{3pt}{1.05em}\hspace{0.35em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{2.0ex}{0.5ex}
+\titlespacing*{\section}{0pt}{2.2ex}{0.6ex}
 
-% ── Itemize: accent-colored bullets with tighter spacing ───────────────────────
-\setlist{noitemsep,topsep=0.1ex,partopsep=0pt,parsep=0pt}
-\setlist[itemize]{leftmargin=0.9em,label=\color{accent}\textbullet,itemsep=0.08cm}
+% ── Itemize: compact with accent bullets ─────────────────────────────────────
+\setlist{noitemsep,topsep=0.08ex,partopsep=0pt,parsep=0pt}
+\setlist[itemize]{%
+  leftmargin=0.85em,
+  label=\color{accent}\textbullet,
+  itemsep=0.07cm,
+  parsep=0pt,
+}
 
 % ── Page top accent bar ───────────────────────────────────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-5pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{5pt}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{4.5pt}}%
     }%
   }%
 }
 
-% ── Double-rule header divider ────────────────────────────────────────────────
+% ── Single refined rule divider ───────────────────────────────────────────────
 \newcommand{\headerrule}{%
-  \par\noindent\textcolor{rule}{\rule{\linewidth}{0.7pt}}\par
-  \nopagebreak\vspace{-0.5ex}%
-  \par\noindent\textcolor{accent}{\rule{\linewidth}{1.8pt}}\par
-  \nopagebreak\vspace{0.28cm}%
+  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{1.2pt}}\par
+  \nopagebreak\vspace{0.25cm}%
 }
 
 % ── Footer: page number + name ───────────────────────────────────────────────
@@ -77,7 +83,7 @@
   \fancyfoot[L]{\sffamily\scriptsize\color{muted}Yuanshuo Du}
   \fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}
   \fancyfoot[R]{}
-  \fancyfoot[RO]{\color{rule}\rule{\linewidth}{0.4pt}}% top separator on right-odd
+  \fancyfoot[RO]{\color{rule}\rule{\linewidth}{0.4pt}}%
   \fancyfoot[LE]{\color{rule}\rule{\linewidth}{0.4pt}}
   \renewcommand{\headrulewidth}{0pt}
 }
@@ -88,12 +94,12 @@
 \newcommand{\entry}[4]{%
   \textbf{#1}
   \hfill {\sffamily\scshape\small\color{secondary}#3}\\
-  {\itshape\color{accent}}#2%
-  \vspace{-0.5mm}%
+  {\itshape\color{secondary}#2}%
+  \vspace{-0.7mm}%
   \begin{itemize}
     #4
   \end{itemize}
-  \vspace{0.15cm}
+  \vspace{0.12cm}
 }
 
 \endinput
