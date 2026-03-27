@@ -6,18 +6,24 @@
 \RequirePackage{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
-\RequirePackage[T1]{fontenc}
-\RequirePackage{microtype}
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 \RequirePackage{eso-pic}
 \RequirePackage{fancyhdr}
 \RequirePackage{ragged2e}
-\RequirePackage{lmodern}
 \RequirePackage{textcomp}
+\RequirePackage{calc}
+\RequirePackage{sourcesanspro}          % Modern sans-serif (XeLaTeX: FreeSans; pdflatex: helvet fallback)
+
+% ── Microtype: load for XeLaTeX only (font expansion; pdflatex has font issues) ─
+\@ifpackageloaded{iftex}{%
+  \ifXeTeX
+    \RequirePackage{microtype}
+    \microtypesetup{expansion=false,tracking=false}%
+  \fi
+}{}
 
 % ── Refined professional color palette ────────────────────────────────────────
-% Deep navy primary for strong hierarchy; vibrant blue accent for modern feel
 \definecolor{primary}{RGB}{15,23,42}       % Slate-900 — headings, name
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — bullets, links, accent bars
 \definecolor{accentlight}{RGB}{219,234,254} % Blue-100 — soft skill pill background
@@ -26,13 +32,14 @@
 \definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, secondary labels
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
 \definecolor{headerbar}{RGB}{37,99,235}    % Blue-600 — top page bar
+\definecolor{headerbar2}{RGB}{99,179,237}  % Blue-400 — subtle gradient strip below bar
 \definecolor{surface}{RGB}{248,250,252}    % Slate-50 — project tech pill bg
-\definecolor{surface2}{RGB}{241,245,249}   % Slate-100 — section alt bg (unused)
 \definecolor{skillbg}{RGB}{239,246,255}    % Blue-50 — skills pill bg
 \definecolor{skilltext}{RGB}{29,78,216}   % Blue-700 — skills pill text
+\definecolor{summarybar}{RGB}{186,230,253}% Sky-100 — summary left-border tint
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=2cm,top=1.7cm,right=2cm,bottom=1.7cm}
+\geometry{a4paper,left=2cm,top=1.8cm,right=2cm,bottom=1.8cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
@@ -44,35 +51,33 @@
   pdfborderstyle={round}{0}{1},
 }
 
-% ── Microtype ─────────────────────────────────────────────────────────────────
-\microtypesetup{protrusion=true,expansion=true,tracking=mtc}
-\@ifpackageloaded{iftex}{
-  \ifXeTeX\microtypesetup{expansion=false,tracking=false}\fi
-}{}
-
 % ── Section titles: left accent bar + letter-spacing ────────────────────────
 \titleformat{\section}{%
-  \normalsize\sffamily\bfseries\color{primary}\raggedright
-  \addtolength{\spaceskip}{0.08em}% slightly increased letter spacing
+  \normalsize\sffamily\bfseries\color{primary}%
+  \addtolength{\spaceskip}{0.1em}%
+  \raggedright
 }{%
-  \llap{\color{accent}\rule[0.12ex]{3pt}{1.1em}\hspace{0.38em}}% left accent bar, refined
+  \llap{\color{accent}\rule[0.12ex]{3pt}{1.15em}\hspace{0.38em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{2.8ex}{0.7ex}% more breathing room above/below sections
+\titlespacing*{\section}{0pt}{3ex}{0.8ex}% breathing room above/below sections
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0.1ex,partopsep=0pt,parsep=0pt}
 \setlist[itemize]{%
   leftmargin=0.9em,
   label=\color{accent}\textbullet,
-  itemsep=0.08cm,
+  itemsep=0.09cm,
   parsep=0pt,
 }
 
-% ── Page top accent bar ───────────────────────────────────────────────────────
+% ── Page top accent bar with subtle gradient strip ──────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-6pt\relax){%
       \textcolor{headerbar}{\rule{\paperwidth}{5pt}}%
+    }%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-6pt-3pt\relax){%
+      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}%
     }%
   }%
 }
@@ -80,7 +85,7 @@
 % ── Refined rule divider ───────────────────────────────────────────────────────
 \newcommand{\headerrule}{%
   \par\noindent\textcolor{accentmid}{\rule{\linewidth}{1.5pt}}\par
-  \nopagebreak\vspace{0.3cm}%
+  \nopagebreak\vspace{0.35cm}%
 }
 
 % ── Footer: page number + name ───────────────────────────────────────────────
@@ -93,21 +98,7 @@
 }
 \pagestyle{plain}
 
-% ── Compact entry helper ─────────────────────────────────────────────────────
-\newcommand{\entry}[4]{%
-  \textbf{#1}
-  \hfill {\sffamily\scshape\small\color{secondary}#3}\\
-  {\itshape\color{secondary}#2}%
-  \vspace{-0.7mm}%
-  \begin{itemize}
-    #4
-  \end{itemize}
-  \vspace{0.14cm}
-}
-
-% ── Skill pill: softer rounded box ──────────────────────────────────────────
-% Uses \rmfamily to ensure consistent baseline, avoids \colorbox harshness
-\RequirePackage{calc}
+% ── Skill pill: soft rounded box ─────────────────────────────────────────────
 \def\skillpill#1{%
   {\rmfamily\small\color{skilltext}%
     \kern0.06em\relax%

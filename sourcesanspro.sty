@@ -1,27 +1,46 @@
-%% Custom sourcesanspro.sty - uses FreeSans as substitute
+%% sourcesanspro.sty — modern sans-serif: FreeSans (XeLaTeX) or lmodern (pdflatex)
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{sourcesanspro}[2024 Custom sourcesanspro using FreeSans]
+\ProvidesPackage{sourcesanspro}[2024]
 
+% Detect XeLaTeX / LuaLaTeX
+\@ifpackageloaded{fontspec}{%
+  % fontspec already loaded — skip re-loading
+  \ProvidesPackage{sourcesanspro}[2024 fontspec already loaded]
+}{%
+  % pdfTeX: use scalable lmodern as sans-serif fallback
+  \RequirePackage{lmodern}
+  \RequirePackage[T1]{fontenc}
+  \let\sourcesanspro\sffamily
+  \let\sourcesansprolight\sffamily
+  \let\sourcesansprobold\sffamily
+  \let\sourcesansproit\sffamily
+  \let\sourcesansprobfit\sffamily
+  \endinput
+}
+
+% ── XeLaTeX path: use FreeSans (available in CI's fonts-freefont-otf) ──────────
 \RequirePackage{fontspec}
 
 % Silently ignore all options
 \DeclareOption*{}
 \ProcessOptions\relax
 
-% Define font family for FreeSans
-\newfontfamily\SSPfamily{FreeSans}
+% Set FreeSans as the default sans-serif font
+\setsansfont{FreeSans}[
+  FontFace={l}{n}{FreeSans:style=Regular},
+  FontFace={l}{it}{FreeSans:style=Italic},
+  FontFace={m}{n}{FreeSans:style=Medium},
+  FontFace={m}{it}{FreeSans:style=MediumItalic},
+  FontFace={b}{n}{FreeSans:style=Bold},
+  FontFace={b}{it}{FreeSans:style=BoldItalic},
+  FontFace={bx}{n}{FreeSans:style=Bold},
+  FontFace={bx}{it}{FreeSans:style=BoldItalic},
+  Scale=MatchLowercase
+]
 
-% \sourcesanspro should just switch to sans-serif font family
-% NOT \setmainfont which sets document main font (causes length issues)
-\let\sourcesanspro\SSPfamily
-\let\sourcesansprolight\SSPfamily  
-\let\sourcesansprobold\SSPfamily
-\let\sourcesansproit\SSPfamily
-\let\sourcesansprobfit\SSPfamily
-\let\sourcesanspromedium\SSPfamily
-
-% Source Sans aliases
-\let\SourceSansPro\SSPfamily
-\let\SourceSansProLight\SSPfamily
-
-\endinput
+% Alias sourcesanspro commands to the sans-serif family
+\let\sourcesanspro\sffamily
+\let\sourcesansprolight\sffamily
+\let\sourcesansprobold\sffamily
+\let\sourcesansproit\sffamily
+\let\sourcesansprobfit\sffamily
