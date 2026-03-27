@@ -39,7 +39,7 @@
 \definecolor{summarybar}{RGB}{186,230,253}% Sky-100 — summary left-border tint
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=2cm,top=1.8cm,right=2cm,bottom=1.8cm}
+\geometry{a4paper,left=1.8cm,top=1.5cm,right=1.8cm,bottom=1.5cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
@@ -58,14 +58,14 @@
 }{%
   \llap{\color{accent}\rule[0.12ex]{3pt}{1.15em}\hspace{0.38em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{2ex}{0.6ex}% breathing room above/below sections
+\titlespacing*{\section}{0pt}{1.5ex}{0.5ex}% breathing room above/below sections
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0.1ex,partopsep=0pt,parsep=0pt}
 \setlist[itemize]{%
   leftmargin=0.9em,
   label=\color{accent}\textbullet,
-  itemsep=0.05cm,
+  itemsep=0.03cm,
   parsep=0pt,
 }
 
