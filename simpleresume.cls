@@ -39,7 +39,7 @@
 \definecolor{summarybar}{RGB}{186,230,253}% Sky-100 — summary left-border tint
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=1.8cm,top=1.5cm,right=1.8cm,bottom=1.5cm}
+\geometry{a4paper,left=1.7cm,top=1.4cm,right=1.7cm,bottom=1.4cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
