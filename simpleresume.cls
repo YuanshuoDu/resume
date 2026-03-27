@@ -48,7 +48,6 @@
   urlcolor=accent,
   urlbordercolor=accentmid,
   linkbordercolor=accentmid,
-  pdfborderstyle={round}{0}{1},
 }
 
 % ── Section titles: left accent bar + letter-spacing ────────────────────────
@@ -90,9 +89,9 @@
 
 % ── Footer: page number + name ───────────────────────────────────────────────
 \fancypagestyle{plain}{%
-  \fancyfoot[L]{\sffamily\scriptsize\color{muted}Yuanshuo Du}
+  \fancyfoot[L]{\sffamily\scriptsize\color{secondary}Yuanshuo Du}
   \fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}
-  \fancyfoot[R]{}
+  \fancyfoot[R]{\color{rule}\rule{0.4pt}{6pt}}
   \fancyfoot[RO]{\color{rule}\rule{\linewidth}{0.4pt}}%
   \renewcommand{\headrulewidth}{0pt}
 }
