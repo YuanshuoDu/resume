@@ -58,25 +58,25 @@
 }{%
   \llap{\color{accent}\rule[0.12ex]{3pt}{1.15em}\hspace{0.38em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{3ex}{0.8ex}% breathing room above/below sections
+\titlespacing*{\section}{0pt}{2ex}{0.6ex}% breathing room above/below sections
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0.1ex,partopsep=0pt,parsep=0pt}
 \setlist[itemize]{%
   leftmargin=0.9em,
   label=\color{accent}\textbullet,
-  itemsep=0.09cm,
+  itemsep=0.05cm,
   parsep=0pt,
 }
 
 % ── Page top accent bar with subtle gradient strip ──────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-6pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{5pt}}%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-4pt\relax){%
+      \textcolor{headerbar}{\rule{\paperwidth}{3pt}}%
     }%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-6pt-3pt\relax){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-4pt-2pt\relax){%
+      \textcolor{headerbar2}{\rule{\paperwidth}{1pt}}%
     }%
   }%
 }
