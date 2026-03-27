@@ -9,6 +9,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 \RequirePackage{eso-pic}
+\RequirePackage{array}
 \RequirePackage{fancyhdr}
 \RequirePackage{ragged2e}
 \RequirePackage{textcomp}
@@ -39,7 +40,7 @@
 \definecolor{summarybar}{RGB}{186,230,253}% Sky-100 — summary left-border tint
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=1.7cm,top=1.4cm,right=1.7cm,bottom=1.4cm}
+\geometry{a4paper,left=1.7cm,top=1.3cm,right=1.7cm,bottom=1.3cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
@@ -58,7 +59,7 @@
 }{%
   \llap{\color{accent}\rule[0.12ex]{3pt}{1.15em}\hspace{0.38em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{1.2ex}{0.4ex}% breathing room above/below sections
+\titlespacing*{\section}{0pt}{1ex}{0.3ex}% breathing room above/below sections
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0.1ex,partopsep=0pt,parsep=0pt}
