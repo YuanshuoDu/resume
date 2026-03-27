@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.25)  26 MAR 2026 04:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.25)  27 MAR 2026 03:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,21 +348,28 @@ Package hyperref Warning: Invalid value `{round}{0}{1}'
 Package microtype Warning: The tracking set `mtc' is undeclared.
 (microtype)                Using set `smallcaps' instead.
 
-
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less.
-(fancyhdr)                Please consider using the `twoside' option on input l
-ine 91.
-
-)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count280
+\calc@Bcount=\count281
+\calc@Adimen=\dimen162
+\calc@Bdimen=\dimen163
+\calc@Askip=\skip78
+\calc@Bskip=\skip79
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count282
+\calc@Cskip=\skip80
+))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 3.
 
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count280
+\l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box54
 )
 (./resume.aux)
@@ -395,15 +402,15 @@ LaTeX Font Info:    ... okay on input line 3.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(54.06006pt, 489.38776pt, 54.06006pt)
-* v-part:(T,H,B)=(45.52458pt, 753.99768pt, 45.52458pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(48.36958pt, 748.30768pt, 48.36958pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=489.38776pt
-* \textheight=753.99768pt
-* \oddsidemargin=-18.20993pt
-* \evensidemargin=-18.20993pt
-* \topmargin=-63.7454pt
+* \textwidth=483.69687pt
+* \textheight=748.30768pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-60.9004pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -423,16 +430,16 @@ LaTeX Font Info:    ... okay on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen162
+\scratchcounter=\count284
+\scratchdimen=\dimen164
 \scratchbox=\box55
-\nofMPsegments=\count282
-\nofMParguments=\count283
+\nofMPsegments=\count285
+\nofMParguments=\count286
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen163
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
+\MPscratchCnt=\count287
+\MPscratchDim=\dimen165
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
 \everyMPtoPDFconversion=\toks26
 )
 LaTeX Info: Redefining \microtypecontext on input line 3.
@@ -481,54 +488,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-! Undefined control sequence.
-l.17     \hrefmailto
-                    :duyuanshuo@gmail.com}{duyuanshuo@gmail.com}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra }, or forgotten \endgroup.
-l.18   }
-        \\[0.1cm]
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--43
+Underfull \hbox (badness 10000) in paragraph at lines 33--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--54
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--65
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 86.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 68.
 
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 86.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 68.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-0.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
+2.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/
@@ -543,11 +531,11 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: 892AF3F6559C02C8668B967A5E40D475;631.
  ) 
 Here is how much of TeX's memory you used:
- 12315 strings out of 476182
- 194281 string characters out of 5795595
- 1950975 words of memory out of 5000000
- 34088 multiletter control sequences out of 15000+600000
- 610869 words of font info for 98 fonts, out of 8000000 for 9000
+ 12404 strings out of 476182
+ 195684 string characters out of 5795595
+ 1949975 words of memory out of 5000000
+ 34179 multiletter control sequences out of 15000+600000
+ 610557 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,11n,93p,1003b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
@@ -556,10 +544,10 @@ sr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on resume.pdf (2 pages, 240079 bytes).
+Output written on resume.pdf (2 pages, 237812 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  10 named destinations out of 1000 (max. 500000)
  36921 words of extra memory for PDF output out of 42996 (max. 10000000)
 
