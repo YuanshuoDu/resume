@@ -66,7 +66,7 @@
 \setlist[itemize]{%
   leftmargin=0.9em,
   label=\color{accent}\textbullet,
-  itemsep=0.03cm,
+  itemsep=0.02cm,
   parsep=0pt,
 }
 
