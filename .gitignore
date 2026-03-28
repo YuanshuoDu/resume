@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.out
+*.tmp
+*-[0-9]*.png
+page-*.png
+resume_page-*.png
