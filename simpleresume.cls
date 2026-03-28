@@ -69,10 +69,10 @@
 % ── Page top accent bar with subtle gradient strip ───────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-4pt\relax){%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt\relax){%
       \textcolor{headerbar}{\rule{\paperwidth}{3pt}}%
     }%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-4pt-2pt\relax){%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt\relax){%
       \textcolor{headerbar2}{\rule{\paperwidth}{1pt}}%
     }%
   }%
