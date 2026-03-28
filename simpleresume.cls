@@ -14,9 +14,7 @@
 \RequirePackage{ragged2e}
 \RequirePackage{textcomp}
 \RequirePackage{calc}
-\RequirePackage{sourcesanspro}          % Modern sans-serif (XeLaTeX: FreeSans; pdflatex: helvet fallback)
-
-% ── Microtype: load for XeLaTeX only (font expansion; pdflatex has font issues) ─
+\RequirePackage{sourcesanspro}
 \@ifpackageloaded{iftex}{%
   \ifXeTeX
     \RequirePackage{microtype}
@@ -24,23 +22,21 @@
   \fi
 }{}
 
-% ── Refined professional color palette ────────────────────────────────────────
-\definecolor{primary}{RGB}{15,23,42}       % Slate-900 — headings, name
+% ── Professional color palette ────────────────────────────────────────────────
+\definecolor{primary}{RGB}{15,23,42}       % Slate-900 — headings
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — bullets, links, accent bars
-\definecolor{accentlight}{RGB}{219,234,254} % Blue-100 — soft skill pill background
 \definecolor{accentmid}{RGB}{147,197,253}  % Blue-300 — divider accent
 \definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — company names, meta
 \definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, secondary labels
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
 \definecolor{headerbar}{RGB}{37,99,235}    % Blue-600 — top page bar
-\definecolor{headerbar2}{RGB}{99,179,237}  % Blue-400 — subtle gradient strip below bar
-\definecolor{surface}{RGB}{248,250,252}    % Slate-50 — project tech pill bg
+\definecolor{headerbar2}{RGB}{99,179,237}  % Blue-400 — subtle gradient strip
+\definecolor{namecolor}{RGB}{15,23,42}    % Slate-900 — name
 \definecolor{skillbg}{RGB}{239,246,255}    % Blue-50 — skills pill bg
 \definecolor{skilltext}{RGB}{29,78,216}   % Blue-700 — skills pill text
-\definecolor{summarybar}{RGB}{186,230,253}% Sky-100 — summary left-border tint
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=1.7cm,top=1.3cm,right=1.7cm,bottom=1.3cm}
+\geometry{a4paper,left=1.7cm,top=1.2cm,right=1.7cm,bottom=1.2cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
@@ -51,26 +47,26 @@
   linkbordercolor=accentmid,
 }
 
-% ── Section titles: left accent bar + letter-spacing ────────────────────────
+% ── Section titles: left accent bar ─────────────────────────────────────────
 \titleformat{\section}{%
   \normalsize\sffamily\bfseries\color{primary}%
   \addtolength{\spaceskip}{0.1em}%
   \raggedright
 }{%
-  \llap{\color{accent}\rule[0.12ex]{3pt}{1.15em}\hspace{0.38em}}% left accent bar
+  \llap{\color{accent}\rule[0.12ex]{3pt}{1.1em}\hspace{0.38em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{1ex}{0.3ex}% breathing room above/below sections
+\titlespacing*{\section}{0pt}{0.9ex}{0.25ex}
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
-\setlist{noitemsep,topsep=0.1ex,partopsep=0pt,parsep=0pt}
+\setlist{noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt}
 \setlist[itemize]{%
   leftmargin=0.9em,
   label=\color{accent}\textbullet,
-  itemsep=0.02cm,
+  itemsep=0.03cm,
   parsep=0pt,
 }
 
-% ── Page top accent bar with subtle gradient strip ──────────────────────────
+% ── Page top accent bar with subtle gradient strip ───────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-4pt\relax){%
@@ -82,13 +78,13 @@
   }%
 }
 
-% ── Refined rule divider ───────────────────────────────────────────────────────
+% ── Header rule divider ───────────────────────────────────────────────────────
 \newcommand{\headerrule}{%
   \par\noindent\textcolor{accentmid}{\rule{\linewidth}{1.5pt}}\par
-  \nopagebreak\vspace{0.35cm}%
+  \nopagebreak\vspace{0.25cm}%
 }
 
-% ── Footer: page number + name ───────────────────────────────────────────────
+% ── Footer ───────────────────────────────────────────────────────────────────
 \fancypagestyle{plain}{%
   \fancyfoot[L]{\sffamily\scriptsize\color{secondary}Yuanshuo Du}
   \fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}
@@ -98,7 +94,7 @@
 }
 \pagestyle{plain}
 
-% ── Skill pill: soft rounded box ─────────────────────────────────────────────
+% ── Skill pill ────────────────────────────────────────────────────────────────
 \def\skillpill#1{%
   {\rmfamily\small\color{skilltext}%
     \kern0.06em\relax%
