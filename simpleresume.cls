@@ -86,6 +86,7 @@
 
 % ── Footer ───────────────────────────────────────────────────────────────────
 \fancypagestyle{plain}{%
+  \fancyhead{}% Clear all headers (prevents section names appearing at top)
   \fancyfoot[L]{\sffamily\scriptsize\color{secondary}Yuanshuo Du}
   \fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}
   \fancyfoot[R]{\color{rule}\rule{0.4pt}{6pt}}
