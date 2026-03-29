@@ -36,7 +36,7 @@
 \definecolor{skilltext}{RGB}{29,78,216}   % Blue-700 — skills pill text
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=1.7cm,top=1.2cm,right=1.7cm,bottom=1.2cm}
+\geometry{a4paper,left=1.7cm,top=1.2cm,right=1.7cm,bottom=1.5cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
