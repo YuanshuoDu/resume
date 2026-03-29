@@ -60,7 +60,7 @@
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt}
 \setlist[itemize]{%
-  leftmargin=0.9em,
+  leftmargin=1.15em,
   label=\color{accent}\textbullet,
   itemsep=0.03cm,
   parsep=0pt,
