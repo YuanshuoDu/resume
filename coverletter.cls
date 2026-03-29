@@ -15,7 +15,6 @@
 \RequirePackage{textcomp}
 \RequirePackage{calc}
 \RequirePackage{sourcesanspro}
-\RequirePackage{fontawesome6}
 \@ifpackageloaded{iftex}{%
   \ifXeTeX
     \RequirePackage{microtype}
@@ -49,12 +48,10 @@
 % ── Page top accent bar with subtle gradient strip ───────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt\relax{%
-      \textcolor{headerbar}{\rule{\paperwidth}{4pt}}%
-    }%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt\relax{%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}%
-    }%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt){%
+      \textcolor{headerbar}{\rule{\paperwidth}{4pt}}}%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt){%
+      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}}%
   }%
 }
 
@@ -84,10 +81,7 @@
   \nopagebreak\vspace{0.2cm}%
 }
 
-% ── Icon helper ───────────────────────────────────────────────────────────────
-\newcommand{\clicon}[1]{{\color{accent}\FAFamily#1}}
-
-% ── Skill pill (mirrors simpleresume.cls) ─────────────────────────────────────────
+% ── Skill pill (mirrors simpleresume.cls) ─────────────────────────────────────
 \def\skillpill#1{%
   {{\rmfamily\small\color{accent}%
     \kern0.06em\relax%
@@ -99,5 +93,9 @@
     \kern0.06em\relax
   }}%
 }
+
+% ── Contact icon shortcut (text-based, no external font needed) ─────────────
+% Uses small coloured text labels instead of icon fonts for reliability
+\def\cllabel#1{{\sffamily\small\color{accent}\textbf{#1}}\ }
 
 \endinput
