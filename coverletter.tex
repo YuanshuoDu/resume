@@ -1,4 +1,5 @@
 \documentclass{coverletter}
+\usepackage{fontawesome5}
 
 \begin{document}
 
@@ -6,19 +7,20 @@
 %  HEADER — Name + Contact Icons
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{center}
-  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.15cm]
-
-  % Contact row: styled text labels + links (no external font dependency)
+  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.12cm]
+  % Row 1: GitHub · LinkedIn · Email (with icons)
   {\sffamily\small
-    \cllabel{E}\href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\underline{duyuanshuo@gmail.com}}
-    ~\textbullet~
-    \cllabel{P}+353 89 454 6468
-    ~\textbullet~
-    \cllabel{L}Dublin, Ireland
-    ~\textbullet~
-    \cllabel{in}\href{https://linkedin.com/in/yuanshuodu}{\color{accent}\underline{linkedin.com/in/yuanshuodu}}
-    ~\textbullet~
-    \cllabel{gh}\href{https://github.com/YuanshuoDu}{\color{accent}\underline{github.com/YuanshuoDu}}
+    \href{https://github.com/YuanshuoDu}{\color{accent}\faGithub\color{muted}\ YuanshuoDu}
+    \quad\textbullet\quad
+    \href{https://linkedin.com/in/yuanshuodu}{\color{accent}\faLinkedin\color{muted}\ yuanshuodu}
+    \quad\textbullet\quad
+    \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\faEnvelope\color{muted}\ duyuanshuo@gmail.com}
+  }\\[0.06cm]
+  % Row 2: Phone · Location (with icons)
+  {\sffamily\small\color{muted}
+    \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
+    \quad\textbullet\quad
+    \href{https://www.google.com/maps/place/Dublin,+Ireland}{\color{accent}\faMapMarker\ Dublin, Ireland}
   }
 \end{center}
 
