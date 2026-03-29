@@ -1,4 +1,4 @@
-name: Build Resume PDF
+name: Build Resume & Cover Letter PDFs
 
 on:
   push:
@@ -20,15 +20,21 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex latexmk fonts-freefont-otf
 
-      - name: Build PDF
+      - name: Build Resume PDF
         run: |
           xelatex -interaction=nonstopmode resume.tex
           xelatex -interaction=nonstopmode resume.tex
+
+      - name: Build Cover Letter PDF
+        run: |
+          xelatex -interaction=nonstopmode coverletter.tex
+          xelatex -interaction=nonstopmode coverletter.tex
 
       - name: Prepare artifact
         run: |
           mkdir -p resume-artifact
           mv resume.pdf resume-artifact/YuanshuoDu_Resume.pdf
+          mv coverletter.pdf resume-artifact/YuanshuoDu_CoverLetter.pdf
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v4
