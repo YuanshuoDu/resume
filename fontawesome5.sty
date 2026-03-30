@@ -1,58 +1,24 @@
-%% fontawesome5.sty - uses system FontAwesome 6 Free
+%% fontawesome5.sty - stub for pdflatex compatibility (text labels)
+%% In XeLaTeX builds on CI/CD, the real fontawesome5 with glyphs is used.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome5}[2024 FA6 Free using system font]
+\ProvidesPackage{fontawesome5}[2024 stub for pdflatex]
 
-\RequirePackage{fontspec}
-\RequirePackage{accsupp}
+% Provide \newfontfamily and \symbol as no-ops for pdflatex
+\providecommand\newfontfamily[2][]{}
+\providecommand\symbol[1]{\textbf{?}}
 
-% Font paths for FontAwesome 6 Free (relative to project root via Path option)
-\newfontfamily\FAFamilySolid[Path=fonts/]{Font Awesome 6 Free-Solid-900}
-\newfontfamily\FAFamilyBrands[Path=fonts/]{Font Awesome 6 Brands-Regular-400}
-
-% \faAlt{template}{icon}{text}
-\def\faAlt#1#2#3{%
-  \BeginAccSupp{ActualText={#1}}#2#3\EndAccSupp}
-
-% Brand icons (in Brands font)
-\def\faGithub{{\FAFamilyBrands\symbol{"F092}}}
-\def\faGithubAlt{{\FAFamilyBrands\symbol{"F113}}}
-\def\faLinkedin{{\FAFamilyBrands\symbol{"F08C}}}
-\def\faLinkedinSquare{{\FAFamilyBrands\symbol{"F08C}}}
-\def\faTwitter{{\FAFamilyBrands\symbol{"F099}}}
-\def\faTwitterSquare{{\FAFamilyBrands\symbol{"F099}}}
-\def\faTwitterX{{\FAFamilyBrands\symbol{"F099}}}
-\def\faBitbucket{{\FAFamilyBrands\symbol{"F171}}}
-\def\faGitlab{{\FAFamilyBrands\symbol{"F296}}}
-\def\faStackOverflow{{\FAFamilyBrands\symbol{"F16C}}}
-\def\faSkype{{\FAFamilyBrands\symbol{"F17E}}}
-\def\faReddit{{\FAFamilyBrands\symbol{"F281}}}
-\def\faRedditAlien{{\FAFamilyBrands\symbol{"F281}}}
-\def\faRedditSquare{{\FAFamilyBrands\symbol{"F281}}}
-\def\faXing{{\FAFamilyBrands\symbol{"F168}}}
-\def\faXingSquare{{\FAFamilyBrands\symbol{"F169}}}
-\def\faMastodon{{\FAFamilyBrands\symbol{"F4F6}}}
-\def\faMedium{{\FAFamilyBrands\symbol{"F23A}}}
-\def\faKaggle{{\FAFamilyBrands\symbol{"F259}}}
-\def\faOrcid{{\FAFamilyBrands\symbol{"F337}}}
-\def\faResearchgate{{\FAFamilyBrands\symbol{"F336}}}
-\def\faTelegram{{\FAFamilyBrands\symbol{"F2C6}}}
-
-% Solid icons (in Solid font)
-\def\faBirthdayCake{{\FAFamilySolid\symbol{"F1FD}}}
-\def\faCakeCandles{{\FAFamilySolid\symbol{"F1FD}}}
-\def\faEnvelope{{\FAFamilySolid\symbol{"F0E0}}}
-\def\faEnvelopeO{{\FAFamilySolid\symbol{"F003}}}
-\def\faExternalLink{{\FAFamilySolid\symbol{"F08E}}}
-\def\faExternalLinkSquare{{\FAFamilySolid\symbol{"F14C}}}
-\def\faGlobe{{\FAFamilySolid\symbol{"F0AC}}}
-\def\faGraduationCap{{\FAFamilySolid\symbol{"F19D}}}
-\def\faHome{{\FAFamilySolid\symbol{"F015}}}
-\def\faHouseChimney{{\FAFamilySolid\symbol{"F015}}}
-\def\faMobile{{\FAFamilySolid\symbol{"F10C}}}
-\def\faMobilePhone{{\FAFamilySolid\symbol{"F10C}}}
-\def\faPaperPlane{{\FAFamilySolid\symbol{"F1D8}}}
-\def\faPaperPlaneO{{\FAFamilySolid\symbol{"F1D9}}}
-\def\faPhone{{\FAFamilySolid\symbol{"F095}}}
-\def\faWeb{{\FAFamilySolid\symbol{"F080}}}
-\def\faWebsite{{\FAFamilySolid\symbol{"F080}}}
-\def\faMapMarker{{\FAFamilySolid\symbol{"F3C5}}}
+% Text-label icons (works with any engine)
+\def\faGithub{{\sffamily GitHub}}
+\def\faGithubAlt{{\sffamily GitHub}}
+\def\faLinkedin{{\sffamily LinkedIn}}
+\def\faLinkedinSquare{{\sffamily LinkedIn}}
+\def\faTwitter{{\sffamily Twitter}}
+\def\faTwitterSquare{{\sffamily Twitter}}
+\def\faTwitterX{{\sffamily X}}
+\def\faEnvelope{{\sffamily Email}}
+\def\faPhone{{\sffamily Tel}}
+\def\faMapMarker{{\sffamily Location}}
+\def\faExternalLinkAlt{{\sffamily Link}}
+\def\faGlobe{{\sffamily Globe}}
+\def\faCheck{{\sffamily OK}}
+\endinput
