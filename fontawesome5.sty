@@ -2,35 +2,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{fontawesome5}[2024]
 
-\RequirePackage{iftex}
-
-\@if XeTeX
-{%
-  % XeLaTeX: load system FontAwesome6 via fontspec
-  \RequirePackage{fontspec}
-  \newfontfamily\FAicons{"Font Awesome 6 Free Solid"}
-  \newfontfamily\FAbrands{"Font Awesome 6 Brands"}
-
-  \def\faCode{{\FAicons\symbol{"F121}}}
-  \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
-  \def\faCertificate{{\FAicons\symbol{"F0A3}}}
-  \def\faClock{{\FAicons\symbol{"F017}}}
-  \def\faEnvelope{{\FAicons\symbol{"F0E0}}}
-  \def\faPhone{{\FAicons\symbol{"F095}}}
-  \def\faMapMarker{{\FAicons\symbol{"F3C5}}}
-  \def\faGlobe{{\FAicons\symbol{"F0AC}}}
-  \def\faCheck{{\FAicons\symbol{"F00C}}}
-  \def\faExternalLinkAlt{{\FAicons\symbol{"F35D}}}
-
-  \def\faGithub{{\FAbrands\symbol{"F09B}}}
-  \def\faGithubAlt{{\FAbrands\symbol{"F113}}}
-  \def\faLinkedin{{\FAbrands\symbol{"F08C}}}
-  \def\faLinkedinSquare{{\FAbrands\symbol{"F08C}}}
-  \def\faTwitter{{\FAbrands\symbol{"F099}}}
-  \def\faTwitterSquare{{\FAbrands\symbol{"F081}}}
-  \def\faTwitterX{{\FAbrands\symbol{"E61F}}}
-}{%
-  % pdflatex: text-label stubs
+% XeLaTeX detection
+\expandafter\ifx\csname XeTeXrevision\endcsname\relax
+  % NOT XeLaTeX → pdflatex stubs
   \providecommand\newfontfamily[2][]{}
   \providecommand\symbol[1]{\textbf{?}}
   \def\faGithub{{\sffamily GitHub}}
@@ -50,5 +24,27 @@
   \def\faShieldHalved{{\sffamily [Sec]}}
   \def\faCertificate{{\sffamily [Cert]}}
   \def\faClock{{\sffamily [4+]}}
-}
-\endinput
+\else
+  % XeLaTeX: use XeTeX native \font to load OTF by file path (no fontspec needed)
+  \font\FAicons="fonts/Font Awesome 6 Free-Solid-900.otf" at 10pt
+  \font\FAbrands="fonts/Font Awesome 6 Brands-Regular-400.otf" at 10pt
+
+  \def\faCode{{\FAicons\symbol{"F121}}}
+  \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
+  \def\faCertificate{{\FAicons\symbol{"F0A3}}}
+  \def\faClock{{\FAicons\symbol{"F017}}}
+  \def\faEnvelope{{\FAicons\symbol{"F0E0}}}
+  \def\faPhone{{\FAicons\symbol{"F095}}}
+  \def\faMapMarker{{\FAicons\symbol{"F3C5}}}
+  \def\faGlobe{{\FAicons\symbol{"F0AC}}}
+  \def\faCheck{{\FAicons\symbol{"F00C}}}
+  \def\faExternalLinkAlt{{\FAicons\symbol{"F35D}}}
+
+  \def\faGithub{{\FAbrands\symbol{"F09B}}}
+  \def\faGithubAlt{{\FAbrands\symbol{"F113}}}
+  \def\faLinkedin{{\FAbrands\symbol{"F08C}}}
+  \def\faLinkedinSquare{{\FAbrands\symbol{"F08C}}}
+  \def\faTwitter{{\FAbrands\symbol{"F099}}}
+  \def\faTwitterSquare{{\FAbrands\symbol{"F081}}}
+  \def\faTwitterX{{\FAbrands\symbol{"E61F}}}
+\fi
