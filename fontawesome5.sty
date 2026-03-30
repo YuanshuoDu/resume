@@ -25,10 +25,14 @@
   \def\faCertificate{{\sffamily [Cert]}}
   \def\faClock{{\sffamily [4+]}}
 \else
-  % XeLaTeX: load FontAwesome6 OTF from texmf tree (installed by CI script)
+  % XeLaTeX: use fontspec with external= feature to load OTF file directly
+  % This bypasses fontconfig and uses XeTeX's built-in OTF support
   \RequirePackage{fontspec}
-  \newfontfamily\FAicons{Font Awesome 6 Free Solid}
-  \newfontfamily\FAbrands{Font Awesome 6 Brands}
+  \setmainfont{texgyreheros}[Path=/usr/share/fonts/opentype/]
+  \setsansfont{texgyreheros}[Path=/usr/share/fonts/opentype/]
+  % Load FA6 by absolute path to avoid fontconfig lookup issues
+  \newfontfamily\FAicons{/usr/share/fonts/opentype/Font Awesome 6 Free-Solid-900.otf}
+  \newfontfamily\FAbrands{/usr/share/fonts/opentype/Font Awesome 6 Brands-Regular-400.otf}
 
   \def\faCode{{\FAicons\symbol{"F121}}}
   \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
