@@ -4,7 +4,7 @@
 
 % XeLaTeX detection
 \expandafter\ifx\csname XeTeXrevision\endcsname\relax
-  % NOT XeLaTeX → pdflatex stubs
+  % === pdflatex stubs ===
   \providecommand\newfontfamily[2][]{}
   \providecommand\symbol[1]{\textbf{?}}
   \def\faGithub{{\sffamily GitHub}}
@@ -25,7 +25,7 @@
   \def\faCertificate{{\sffamily [Cert]}}
   \def\faClock{{\sffamily [4+]}}
 \else
-  % XeLaTeX: copy fonts/*.otf to . before build; load from current dir via fontspec
+  % === XeLaTeX: FA6 OTF from fonts/ dir ===
   \RequirePackage{fontspec}
   \newfontfamily\FAicons
     [Path=./,Extension=.otf,UprightFont={Font Awesome 6 Free-Solid-900}]
@@ -34,22 +34,23 @@
     [Path=./,Extension=.otf,UprightFont={Font Awesome 6 Brands-Regular-400}]
     {FontAwesome6BrandsRegular400}
 
-  \def\faCode{{\FAicons\symbol{"F121}}}
-  \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
-  \def\faCertificate{{\FAicons\symbol{"F0A3}}}
-  \def\faClock{{\FAicons\symbol{"F017}}}
-  \def\faEnvelope{{\FAicons\symbol{"F0E0}}}
-  \def\faPhone{{\FAicons\symbol{"F095}}}
-  \def\faMapMarker{{\FAicons\symbol{"F3C5}}}
-  \def\faGlobe{{\FAicons\symbol{"F0AC}}}
-  \def\faCheck{{\FAicons\symbol{"F00C}}}
-  \def\faExternalLinkAlt{{\FAicons\symbol{"F35D}}}
+  % Use \leavevmode to avoid color stack issues with font switches
+  \def\faCode{{\FAicons\leavevmode\symbol{"F121}}}
+  \def\faShieldHalved{{\FAicons\leavevmode\symbol{"F6E9}}}
+  \def\faCertificate{{\FAicons\leavevmode\symbol{"F0A3}}}
+  \def\faClock{{\FAicons\leavevmode\symbol{"F017}}}
+  \def\faEnvelope{{\FAicons\leavevmode\symbol{"F0E0}}}
+  \def\faPhone{{\FAicons\leavevmode\symbol{"F095}}}
+  \def\faMapMarker{{\FAicons\leavevmode\symbol{"F3C5}}}
+  \def\faGlobe{{\FAicons\leavevmode\symbol{"F0AC}}}
+  \def\faCheck{{\FAicons\leavevmode\symbol{"F00C}}}
+  \def\faExternalLinkAlt{{\FAicons\leavevmode\symbol{"F35D}}}
 
-  \def\faGithub{{\FAbrands\symbol{"F09B}}}
-  \def\faGithubAlt{{\FAbrands\symbol{"F113}}}
-  \def\faLinkedin{{\FAbrands\symbol{"F08C}}}
-  \def\faLinkedinSquare{{\FAbrands\symbol{"F08C}}}
-  \def\faTwitter{{\FAbrands\symbol{"F099}}}
-  \def\faTwitterSquare{{\FAbrands\symbol{"F081}}}
-  \def\faTwitterX{{\FAbrands\symbol{"E61F}}}
+  \def\faGithub{{\FAbrands\leavevmode\symbol{"F09B}}}
+  \def\faGithubAlt{{\FAbrands\leavevmode\symbol{"F113}}}
+  \def\faLinkedin{{\FAbrands\leavevmode\symbol{"F08C}}}
+  \def\faLinkedinSquare{{\FAbrands\leavevmode\symbol{"F08C}}}
+  \def\faTwitter{{\FAbrands\leavevmode\symbol{"F099}}}
+  \def\faTwitterSquare{{\FAbrands\leavevmode\symbol{"F081}}}
+  \def\faTwitterX{{\FAbrands\leavevmode\symbol{"E61F}}}
 \fi
