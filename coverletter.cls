@@ -81,14 +81,15 @@
   \nopagebreak\vspace{0.2cm}%
 }
 
-% ── Skill pill (mirrors simpleresume.cls) ─────────────────────────────────────
+% ── Skill pill (muted — cover-letter appropriate) ─────────────────────────────
+% Muted from resume-style vivid blue to slate for a more editorial feel
 \def\skillpill#1{%
-  {{\rmfamily\small\color{accent}%
+  {{\rmfamily\small\color{secondary}%
     \kern0.06em\relax%
     \setlength{\fboxrule}{0pt}%
     \setlength{\fboxsep}{0.35em}%
     \raisebox{0.22ex}{%
-      \colorbox{accent!8}{\kern0.06em\relax#1\kern0.06em\relax}%
+      \colorbox{muted!15}{\kern0.06em\relax#1\kern0.06em\relax}%
     }%
     \kern0.06em\relax
   }}%
