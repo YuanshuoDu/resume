@@ -1,28 +1,54 @@
-%% fontawesome5.sty - stub for pdflatex compatibility (text labels)
-%% In XeLaTeX builds on CI/CD, the real fontawesome5 with glyphs is used.
+%% fontawesome5.sty — XeLaTeX + pdflatex compatible
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{fontawesome5}[2024 stub for pdflatex]
+\ProvidesPackage{fontawesome5}[2024]
 
-% Provide \newfontfamily and \symbol as no-ops for pdflatex
-\providecommand\newfontfamily[2][]{}
-\providecommand\symbol[1]{\textbf{?}}
+\RequirePackage{iftex}
 
-% Text-label icons (works with any engine)
-\def\faGithub{{\sffamily GitHub}}
-\def\faGithubAlt{{\sffamily GitHub}}
-\def\faLinkedin{{\sffamily LinkedIn}}
-\def\faLinkedinSquare{{\sffamily LinkedIn}}
-\def\faTwitter{{\sffamily Twitter}}
-\def\faTwitterSquare{{\sffamily Twitter}}
-\def\faTwitterX{{\sffamily X}}
-\def\faEnvelope{{\sffamily Email}}
-\def\faPhone{{\sffamily Tel}}
-\def\faMapMarker{{\sffamily Location}}
-\def\faExternalLinkAlt{{\sffamily Link}}
-\def\faGlobe{{\sffamily Globe}}
-\def\faCheck{{\sffamily OK}}
-\def\faCode{{\sffamily\ [Code]}}
-\def\faShieldHalved{{\sffamily\ [Sec]}}
-\def\faCertificate{{\sffamily\ [Cert]}}
-\def\faClock{{\sffamily\ [4+]}}
+\@if XeTeX
+{%
+  % XeLaTeX: load FontAwesome6 (installed to ~/.local/share/fonts via CI)
+  \RequirePackage{fontspec}
+  \newfontfamily\FAicons{Font Awesome 6 Free-Solid-900}
+  \newfontfamily\FAbrands{Font Awesome 6 Brands-Regular-400}
+
+  \def\faCode{{\FAicons\symbol{"F121}}}
+  \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
+  \def\faCertificate{{\FAicons\symbol{"F0A3}}}
+  \def\faClock{{\FAicons\symbol{"F017}}}
+  \def\faEnvelope{{\FAicons\symbol{"F0E0}}}
+  \def\faPhone{{\FAicons\symbol{"F095}}}
+  \def\faMapMarker{{\FAicons\symbol{"F3C5}}}
+  \def\faGlobe{{\FAicons\symbol{"F0AC}}}
+  \def\faCheck{{\FAicons\symbol{"F00C}}}
+  \def\faExternalLinkAlt{{\FAicons\symbol{"F35D}}}
+
+  \def\faGithub{{\FAbrands\symbol{"F09B}}}
+  \def\faGithubAlt{{\FAbrands\symbol{"F113}}}
+  \def\faLinkedin{{\FAbrands\symbol{"F08C}}}
+  \def\faLinkedinSquare{{\FAbrands\symbol{"F08C}}}
+  \def\faTwitter{{\FAbrands\symbol{"F099}}}
+  \def\faTwitterSquare{{\FAbrands\symbol{"F081}}}
+  \def\faTwitterX{{\FAbrands\symbol{"E61F}}}
+}{%
+  % pdflatex: text-label stubs
+  \providecommand\newfontfamily[2][]{}
+  \providecommand\symbol[1]{\textbf{?}}
+  \def\faGithub{{\sffamily GitHub}}
+  \def\faGithubAlt{{\sffamily GitHub}}
+  \def\faLinkedin{{\sffamily LinkedIn}}
+  \def\faLinkedinSquare{{\sffamily LinkedIn}}
+  \def\faTwitter{{\sffamily Twitter}}
+  \def\faTwitterSquare{{\sffamily Twitter}}
+  \def\faTwitterX{{\sffamily X}}
+  \def\faEnvelope{{\sffamily Email}}
+  \def\faPhone{{\sffamily Tel}}
+  \def\faMapMarker{{\sffamily Location}}
+  \def\faExternalLinkAlt{{\sffamily Link}}
+  \def\faGlobe{{\sffamily Globe}}
+  \def\faCheck{{\sffamily OK}}
+  \def\faCode{{\sffamily [Code]}}
+  \def\faShieldHalved{{\sffamily [Sec]}}
+  \def\faCertificate{{\sffamily [Cert]}}
+  \def\faClock{{\sffamily [4+]}}
+}
 \endinput
