@@ -2,9 +2,11 @@
 
 My LaTeX resume using Awesome-CV template, automatically built and deployed via GitHub Actions.
 
-## Live Resume
+## Live PDFs
 
-👀 View at: https://yuanshuodu.github.io/resume/
+👀 **Resume:** https://yuanshuodu.github.io/resume/YuanshuoDu_Resume.pdf
+
+👀 **Cover Letter:** https://yuanshuodu.github.io/resume/YuanshuoDu_CoverLetter.pdf
 
 ## Build Status
 
