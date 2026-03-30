@@ -20,23 +20,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex latexmk fonts-freefont-otf
 
-      - name: Install FontAwesome6 OTF for XeLaTeX
-        run: |
-          # Copy FA6 OTF to texmf tree so XeTeX can find them
-          TEXMFDIR=$(kpsewhich -var-value=TEXMFHOME 2>/dev/null || echo "$HOME/.texmf")
-          mkdir -p "$TEXMFDIR/fonts/opentype/fa6"
-          cp fonts/*.otf "$TEXMFDIR/fonts/opentype/fa6/"
-          mktexlsr "$TEXMFDIR" 2>/dev/null || true
-
       - name: Build Resume PDF
         run: |
+          cp fonts/*.otf .
           xelatex -interaction=nonstopmode resume.tex
           xelatex -interaction=nonstopmode resume.tex
+          rm -f *.otf
 
       - name: Build Cover Letter PDF
         run: |
+          cp fonts/*.otf .
           xelatex -interaction=nonstopmode coverletter.tex
           xelatex -interaction=nonstopmode coverletter.tex
+          rm -f *.otf
 
       - name: Prepare artifact
         run: |
