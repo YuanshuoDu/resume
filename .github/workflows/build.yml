@@ -22,10 +22,11 @@ jobs:
 
       - name: Install FontAwesome6 OTF for XeLaTeX
         run: |
-          FONTDIR="$HOME/.local/share/fonts"
-          mkdir -p "$FONTDIR"
-          cp fonts/*.otf "$FONTDIR/"
-          fc-cache -f -v "$FONTDIR" 2>&1 | grep -i awesome || true
+          # Copy FA6 OTF to texmf tree so XeTeX can find them
+          TEXMFDIR=$(kpsewhich -var-value=TEXMFHOME 2>/dev/null || echo "$HOME/.texmf")
+          mkdir -p "$TEXMFDIR/fonts/opentype/fa6"
+          cp fonts/*.otf "$TEXMFDIR/fonts/opentype/fa6/"
+          mktexlsr "$TEXMFDIR" 2>/dev/null || true
 
       - name: Build Resume PDF
         run: |

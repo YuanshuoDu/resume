@@ -25,9 +25,10 @@
   \def\faCertificate{{\sffamily [Cert]}}
   \def\faClock{{\sffamily [4+]}}
 \else
-  % XeLaTeX: use XeTeX native \font to load OTF by file path (no fontspec needed)
-  \font\FAicons="fonts/Font Awesome 6 Free-Solid-900.otf" at 10pt
-  \font\FAbrands="fonts/Font Awesome 6 Brands-Regular-400.otf" at 10pt
+  % XeLaTeX: load FontAwesome6 OTF from texmf tree (installed by CI script)
+  \RequirePackage{fontspec}
+  \newfontfamily\FAicons{Font Awesome 6 Free Solid}
+  \newfontfamily\FAbrands{Font Awesome 6 Brands}
 
   \def\faCode{{\FAicons\symbol{"F121}}}
   \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
