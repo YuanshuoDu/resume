@@ -6,10 +6,10 @@
 
 \@if XeTeX
 {%
-  % XeLaTeX: load FontAwesome6 (installed to ~/.local/share/fonts via CI)
+  % XeLaTeX: load FontAwesome6 from local fonts/ directory
   \RequirePackage{fontspec}
-  \newfontfamily\FAicons{Font Awesome 6 Free-Solid-900}
-  \newfontfamily\FAbrands{Font Awesome 6 Brands-Regular-400}
+  \newfontfamily\FAicons{Font Awesome 6 Free-Solid-900.otf}[Path=fonts/]
+  \newfontfamily\FAbrands{Font Awesome 6 Brands-Regular-400.otf}[Path=fonts/]
 
   \def\faCode{{\FAicons\symbol{"F121}}}
   \def\faShieldHalved{{\FAicons\symbol{"F6E9}}}
