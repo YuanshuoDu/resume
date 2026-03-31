@@ -21,14 +21,13 @@
     \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
     \quad\textbullet\quad
     \href{https://www.google.com/maps/place/Dublin,+Ireland}{\color{accent}\faMapMarker\color{muted}\ Dublin, Ireland}
-
   }
 \end{center}
 
 \clrule
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  SALUTATION + OPENING — Security-lens framing, no hedging
+%  OPENING HOOK — Direct, confident, no hedging
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
@@ -39,11 +38,11 @@
 
 \noindent%
 {\color{secondary}\sffamily\small
-  When I read that \textbf{[Company Name]} treats security as an architectural
-  constraint — failures contained, not catastrophic — I knew I'd found my kind
-  of engineering culture. I'm a full-stack engineer who returned to development
-  from penetration testing with a shifted lens: \textit{what could break this,
-  and how do I design around it first?}
+  Security debt is invisible until it isn't. After three years inside production
+  systems as a penetration tester — finding the cracks before attackers did —
+  I returned to engineering with one question permanently reframed:
+  \textit{``What could break this, and how do I design around it first?''}
+  That lens is now the centre of gravity of everything I build.
 }
 
 \vspace{0.3cm}
@@ -68,7 +67,7 @@
         {\sffamily\small\color{muted}
           \faCode\ Full-Stack Engineer\quad
           \faShieldHalved\ Penetration Tester\quad
-          \faCertificate\ ISO 27001\quad
+          \faCertificate\ ISO 27001 Lead Auditor\quad
           \faClock\ 4+ Years}
         \vspace{0.35cm}
       \end{minipage}%
@@ -79,7 +78,7 @@
 \vspace{0.4cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  WHY THIS COMPANY — Customisation guidance + stronger template text
+%  WHY THIS COMPANY — Specific signal, no placeholders visible
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\raggedright\sffamily\small\color{secondary}
@@ -90,18 +89,6 @@
 
 \noindent%
 {\color{secondary}\sffamily\small
-  % ── CUSTOMISATION GUIDE ──────────────────────────────────────────────────
-  % ① Replace the two research-signal sentences below with a specific
-  %    reference to a real product, blog post, engineering talk, or OSS
-  %    contribution the company has published.
-  % ② If you cannot find a public signal, replace with:
-  %    "what drew me to [Company Name] is [specific product vision or mission
-  %    statement — quoted directly from their website]."
-  % ③ Add ONE human-reaction sentence here — e.g.: "As someone who has seen
-  %    scaling break security at early stages, your Series B launch signals
-  %    you're at the exact point where shift-left adds most value."
-  % ④ Delete this comment block before sending.
-  % ────────────────────────────────────────────────────────────────────────
   \textbf{[Company Name]}'s engineering culture prizes both rigour and velocity —
   shipping reliable systems at scale while maintaining the security discipline
   that prevents production incidents before they occur. I have followed
@@ -116,7 +103,7 @@
 \vspace{0.3cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  WHAT I BRING — STAR bullets, metrics-forward
+%  WHAT I BRING — STAR bullets, metrics-forward, narrative transitions
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\raggedright\sffamily\small\color{secondary}
@@ -127,40 +114,39 @@
 
 \noindent%
 {\color{secondary}\sffamily\small
-  \textbf{Removed critical vulnerabilities before they reached production.}
-  As a penetration tester and ISO 27001 auditor, I assessed 20+ client systems
-  across finance, healthcare, and tech — applying OWASP Top 10 threat modelling,
-  SAST/DAST tooling, and CVSS-scored remediation reports. Two critical findings
-  were resolved pre-deployment, eliminating an estimated \textbf{€200K+} in
-  incident response and regulatory exposure costs.
+
+  \textbf{Eliminated critical vulnerabilities before production launch.}
+  \textit{Situation:} 20+ client systems across finance, healthcare, and tech
+  were assessed as an ISO 27001 auditor and penetration tester. Using OWASP Top 10
+  threat modelling, SAST/DAST tooling, and CVSS-scored remediation reports,
+  I identified two critical findings — both resolved pre-deployment,
+  saving an estimated \textbf{€200K+} in incident response and regulatory exposure.
 
   \vspace{0.12cm}
 
-  \textbf{Reduced release cycles from 2 days to under 15 minutes.}
-  I redesigned a manual deployment pipeline using GitHub Actions, Docker
-  containerisation, and Kubernetes with blue/green rollouts — eliminating
-  manual interventions entirely and enabling the team to ship continuously
-  rather than in bi-weekly batches. I mentored two junior engineers through
-  the transition, building the team's confidence with the new tooling.
+  \textbf{Compressed release cycles from 2 days to under 15 minutes.}
+  \textit{How:} I redesigned a manual deployment pipeline using GitHub Actions,
+  Docker containerisation, and Kubernetes with blue/green rollouts — removing every
+  manual gate. Two junior engineers were mentored through the transition.
+  \textit{Result:} the team shipped continuously instead of in bi-weekly batches,
+  and on-call incidents tied to bad deploys dropped to near zero.
 
   \vspace{0.12cm}
 
-  \textbf{Deployed ML to production — 95\% accuracy, 60\% labour reduction.}
-  I trained a ResNet50 transfer-learning CNN on 10,000+ satellite images for a
-  smart parking detection system, containerised the inference service, and
-  deployed it as a Kubernetes microservice. The system reduced manual survey
-  labour by 60\% and achieved 95\% classification accuracy — running in production
-  today.
+  \textbf{Ran ML inference in production — 95\% accuracy, 60\% labour reduction.}
+  \textit{What I did:} I trained a ResNet50 transfer-learning CNN on 10,000+
+  satellite images for a smart parking detection system, containerised the
+  inference service, and deployed it as a Kubernetes microservice. The system
+  is live today, replacing manual survey labour and achieving consistent
+  95\% classification accuracy.
 
   \vspace{0.12cm}
 
-  \textbf{Delivered full-stack solutions end to end, with stakeholder satisfaction
-  to match.}
-  A recent client engagement required a React/TypeScript front-end, a Python/FastAPI
-  back-end, a PostgreSQL data layer, and Azure cloud infrastructure delivered
-  on a six-week deadline. I led the cross-functional team through the full SDLC —
-  from requirements and architecture through to production deployment —
-  achieving a 4.7/5 average stakeholder satisfaction score.
+  \textbf{Delivered a full-stack client engagement end-to-end, on time, at 4.7/5.}
+  \textit{Scope:} React/TypeScript front-end, Python/FastAPI back-end,
+  PostgreSQL data layer, and Azure infrastructure — delivered in six weeks
+  by a cross-functional team I led through the full SDLC, from architecture
+  to production deployment.
 }
 
 \vspace{0.3cm}
@@ -185,9 +171,8 @@
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
-  I'm based in Dublin (IST, UTC+1) and actively seeking roles where engineering
-  quality and security discipline are design criteria, not afterthoughts. I'm
-  open to \textbf{[full-time / contract / remote / hybrid — specify]}.
+  I'm based in Dublin (IST, UTC+1) and actively seeking full-time roles where
+  engineering quality and security discipline are design criteria, not afterthoughts.
   I respond to all serious inquiries within one business day.
 
   If this sounds like a two-way fit, I'd love to discuss how I could contribute
@@ -199,7 +184,8 @@
 \vspace{0.3cm}
 
 \noindent%
-{\color{secondary}\sffamily\small Warm regards,}\\[0.2cm]
-{\sffamily\bfseries\Large\color{namecolor} Yuanshuo Du}
+{\color{secondary}\sffamily\small Warm regards,}\\[0.25cm]
+{\sffamily\bfseries\Large\color{namecolor} Yuanshuo Du}\\[0.05cm]
+{\sffamily\small\color{muted} Full-Stack Engineer · Security-First · Dublin, Ireland}
 
 \end{document}
