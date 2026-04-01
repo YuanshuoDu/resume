@@ -3,12 +3,8 @@
 
 \begin{document}
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  HEADER — Name + Contact Icons
-% ─────────────────────────────────────────────────────────────────────────────
 \begin{center}
   {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.12cm]
-  % Row 1: GitHub · LinkedIn · Email (with icons)
   {\sffamily\small
     \href{https://github.com/YuanshuoDu}{\color{accent}\faGithub\color{muted}\ YuanshuoDu}
     \quad\textbullet\quad
@@ -16,7 +12,6 @@
     \quad\textbullet\quad
     \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\faEnvelope\color{muted}\ duyuanshuo@gmail.com}
   }\\[0.06cm]
-  % Row 2: Phone · Location (with icons)
   {\sffamily\small\color{muted}
     \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
     \quad\textbullet\quad
@@ -26,9 +21,6 @@
 
 \clrule
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  OPENING — Strong hook, compressed narrative
-% ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
   Dear Hiring Manager,
@@ -38,19 +30,16 @@
 
 \noindent%
 {\color{secondary}\sffamily\small
-  Security debt is invisible until it isn't. After three years inside production
-  systems as a penetration tester — finding the cracks before attackers did —
-  I returned to engineering with one question permanently reframed:
-  \textit{``What could break this, and how do I design around it first?''}
-  That question now drives everything I build: systems that are fast to ship
-  and hard to compromise.
+  Most ML engineers can train a good model. Fewer can deploy it reliably at scale.
+  My dissertation work — a CNN achieving 95\% accuracy on satellite imagery for urban
+  parking detection, deployed as containerised microservices on Azure AKS — forced me
+  to close that gap end-to-end: data pipeline, model training, inference API,
+  production monitoring, and CI/CD automation. I am looking for a role where I can
+  bring that full-stack ML mindset to real production systems.
 }
 
 \vspace{0.35cm}
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  TAGLINE BLOCK — High-impact, scannable
-% ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 \begingroup
   \setlength{\fboxrule}{0pt}%
@@ -61,12 +50,10 @@
       \hspace{0.55cm}%
       \begin{minipage}{\dimexpr\linewidth-1.1cm}
         {\sffamily\bfseries\LARGE\color{primary}
-          Fast to ship. Hard to break.}
+          Train it. Deploy it. Own it.}
         \vspace{0.18cm}
         {\sffamily\small\color{muted}
-          \faCode\ Full-Stack Engineer\quad
-          \faShieldHalved\ Penetration Tester\quad
-          \faCertificate\ ISO 27001 Lead Auditor}
+          ML Engineer \quad\textbullet\quad Full-Stack Depth \quad\textbullet\quad Data Pipeline \quad\textbullet\quad Cloud Deployment}
         \vspace{0.32cm}
       \end{minipage}%
     }%
@@ -75,9 +62,6 @@
 
 \vspace{0.38cm}
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  WHY THIS COMPANY — Company-specific, no placeholders
-% ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\raggedright\sffamily\small\color{primary}
   \llap{\color{accent}\rule[0.12ex]{3pt}{1em}\hspace{0.35em}}\textbf{Why [Company Name]}
@@ -87,23 +71,16 @@
 
 \noindent%
 {\color{secondary}\sffamily\small
-  \textbf{[Company Name]}'s commitment to shipping reliable systems at scale
-  while maintaining rigorous security discipline is exactly the culture I'm
-  building toward. I follow \textbf{[their engineering blog / open-source
-  contributions / zero-trust architecture initiatives]} closely, and the
-  caliber of work I see there signals a team that takes both craft and
-  consequence seriously — the same values I've developed across penetration
-  testing, ISO 27001 audits, and full-stack engineering.
+  \textbf{[Company Name]}'s work at the intersection of machine learning and
+  scalable systems is exactly where I want to focus my career. I am drawn to
+  teams that treat model deployment as a first-class engineering problem —
+  not an afterthought. The opportunity to work with [specific product or
+  technology mentioned by the company] aligns directly with my dissertation
+  experience building production ML systems on Azure Kubernetes.
 }
 
 \vspace{0.3cm}
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  WHAT I BRING — STAR bullets, metrics-forward, ATS-optimized
-%  Keywords: DevSecOps, CI/CD, Kubernetes, Docker, FastAPI, React, TypeScript,
-%  Python, Azure, ISO 27001, OWASP, CVSS, blue/green, PostgreSQL, GitHub Actions,
-%  Terraform, SAST, DAST, ResNet50, Transfer Learning, microservices
-% ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\raggedright\sffamily\small\color{primary}
   \llap{\color{accent}\rule[0.12ex]{3pt}{1em}\hspace{0.35em}}\textbf{What I Bring to the Table}
@@ -114,63 +91,47 @@
 \noindent%
 {\color{secondary}\sffamily\small
 
-  \textbf{Found and fixed critical vulnerabilities pre-production — preventing
-  an estimated €200K+ in incident response exposure.}
-  Assessed 20+ client systems across finance, healthcare, and tech as an
-  ISO 27001 Lead Auditor and penetration tester, applying OWASP Top 10 threat
-  modelling, SAST/DAST tooling, and CVSS-scored remediation reports.
+  \textbf{Trained and deployed a CNN in production at 95\% accuracy.}
+  Used ResNet50 transfer learning on 10,000+ satellite images for urban parking
+  detection (MSc dissertation, published at EduLearn25). Containerised the
+  inference pipeline, deployed on Azure AKS with GitHub Actions CI/CD ---
+  release cycles from 2 days to 15 minutes. The system is live and reducing
+  manual survey labour by 60\%.
 
   \vspace{0.14cm}
 
-  \textbf{Cut release cycles from 2 days to under 15 minutes}
-  by automating a manual deployment pipeline into a GitHub Actions CI/CD
-  pipeline with Docker containerisation, Kubernetes orchestration, and
-  blue/green rollouts — eliminating every manual gate and driving on-call
-  incidents tied to bad deploys to near zero.
+  \textbf{Built a RAG-powered Q\&A platform cutting search time by 45\%.}
+  Implemented semantic embeddings + BM25 hybrid retrieval in an H5/UniApp app
+  with a PostgreSQL-backed data layer. Led a team of 3 through full SDLC;
+  achieved 92\% bug-free production rate and 4.7/5 stakeholder satisfaction.
 
   \vspace{0.14cm}
 
-  \textbf{Ran ML inference in production at 95\% accuracy, replacing 60\% of
-  manual survey labour.}
-  Trained a ResNet50 transfer learning model on a 10,000-image dataset,
-  containerised and deployed it as a Kubernetes microservice on Azure —
-  live in production today.
-
-  \vspace{0.14cm}
-
-  \textbf{Delivered a full-stack client engagement rated 4.7/5 in six weeks,}
-  leading a cross-functional team through React/TypeScript front-end,
-  Python/FastAPI back-end, PostgreSQL data layer, and Azure infrastructure
-  from architecture to production.
+  \textbf{Full-stack engineering depth underneath ML skills.}
+  Strong Python, SQL, and cloud infrastructure (Azure, Kubernetes, Docker) allow
+  me to own data pipelines, model serving, and monitoring without needing a
+  separate backend team. Security-first mindset from ISO 27001 audit experience
+  adds a layer of rigour to how I think about data quality and model reliability.
 
 }
 
 \vspace{0.3cm}
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  SKILLS — Clean pill row, ATS keyword reinforcement
-% ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
-  \skillpill{Python} \skillpill{TypeScript} \skillpill{React} \skillpill{Node.js}
-  \skillpill{FastAPI} \skillpill{Kubernetes} \skillpill{Docker}
-  \skillpill{PostgreSQL} \skillpill{Azure} \skillpill{GitHub Actions}
-  \skillpill{Terraform} \skillpill{CI/CD} \skillpill{DevSecOps}
-  \skillpill{ISO 27001} \skillpill{OWASP Top 10} \skillpill{Penetration Testing}
-  \skillpill{SAST/DAST} \skillpill{ResNet50}
+  \skillpill{Python} \skillpill{TensorFlow} \skillpill{CNN} \skillpill{ResNet50}
+  \skillpill{Deep Learning} \skillpill{SQL} \skillpill{PostgreSQL}
+  \skillpill{Kubernetes} \skillpill{Docker} \skillpill{Azure AKS}
+  \skillpill{GitHub Actions} \skillpill{CI/CD} \skillpill{RAG}
+  \skillpill{BM25} \skillpill{GIS} \skillpill{FastAPI}
 }
 
 \vspace{0.3cm}
 
-% ─────────────────────────────────────────────────────────────────────────────
-%  CTA + SIGN-OFF
-% ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
-  Based in Dublin (IST, UTC+1), available for immediate start, I respond to
-  all serious inquiries within one business day. If this sounds like a
-  two-way fit, I'd welcome the chance to discuss how I could contribute to
-  your team's next challenge.
+  Based in Dublin, available for immediate start. I respond to all serious
+  inquiries within one business day.
   Reach me at
   \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}duyuanshuo@gmail.com}
   or \skillpill{+353 89 454 6468}.
@@ -181,6 +142,6 @@
 \noindent%
 {\color{secondary}\sffamily\small Warm regards,}\\[0.22cm]
 {\sffamily\bfseries\Large\color{namecolor} Yuanshuo Du}\\[0.05cm]
-{\sffamily\small\color{muted} Full-Stack Engineer · Security-First · Dublin, Ireland}
+{\sffamily\small\color{muted} ML Engineer · Full-Stack Depth · Dublin, Ireland}
 
 \end{document}
