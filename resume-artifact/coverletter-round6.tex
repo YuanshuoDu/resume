@@ -1,0 +1,207 @@
+\documentclass{coverletter}
+\usepackage{fontawesome5}
+
+\begin{document}
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  HEADER — Name + Contact Icons
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.12cm]
+  % Row 1: GitHub · LinkedIn · Email (with icons)
+  {\sffamily\small
+    \href{https://github.com/YuanshuoDu}{\color{accent}\faGithub\color{muted}\ YuanshuoDu}
+    \quad\textbullet\quad
+    \href{https://linkedin.com/in/yuanshuodu}{\color{accent}\faLinkedin\color{muted}\ yuanshuodu}
+    \quad\textbullet\quad
+    \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\faEnvelope\color{muted}\ duyuanshuo@gmail.com}
+  }\\[0.06cm]
+  % Row 2: Phone · Location (with icons)
+  {\sffamily\small\color{muted}
+    \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
+    \quad\textbullet\quad
+    \href{https://www.google.com/maps/place/Dublin,+Ireland}{\color{accent}\faMapMarker\color{muted}\ Dublin, Ireland}
+  }
+\end{center}
+
+\clrule
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  OPENING — Security lens, credibility setup, credibility signal
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent%
+{\color{secondary}\sffamily\small
+  Dear Hiring Manager,
+}
+
+\vspace{0.25cm}
+
+\noindent%
+{\color{secondary}\sffamily\small
+  Most engineers ship features. After three years working inside production systems
+  as a penetration tester — breaking things on purpose so developers could fix them
+  before adversaries did — I came back to engineering with a permanent reframe:
+  \textit{``What could this system fail at, and how do I make that outcome impossible?''}
+  That question now shapes every API I design, every pipeline I build, and every
+  architecture decision I make. It's why I believe security and velocity aren't
+  opposites — they're the same discipline applied at different points in time.
+}
+
+\vspace{0.3cm}
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  TAGLINE BLOCK — Identity statement with credibility anchors
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent%
+\begingroup
+  \setlength{\fboxrule}{0pt}%
+  \setlength{\fboxsep}{0pt}%
+  \colorbox{accent!8}{%
+    \parbox{\linewidth}{%
+      \vspace{0.35cm}%
+      \hspace{0.5cm}%
+      \begin{minipage}{\dimexpr\linewidth-1cm}
+        {\sffamily\bfseries\LARGE\color{accent!80!primary}
+          I build systems that are fast to ship\\
+          and hard to break.}
+        \vspace{0.08cm}
+        \vspace{0.15cm}
+        {\sffamily\small\color{muted}
+          \faCode\ Full-Stack Engineer\quad
+          \faShieldHalved\ Penetration Tester\quad
+          \faCertificate\ ISO 27001 Lead Auditor}
+        \vspace{0.35cm}
+      \end{minipage}%
+    }%
+  }%
+\endgroup
+
+\vspace{0.4cm}
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  WHY THIS COMPANY — Three-signal framework for tailoring
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent%
+{\raggedright\sffamily\small\color{secondary}
+  \llap{\color{accent}\rule[0.12ex]{3pt}{1em}\hspace{0.35em}}\textbf{Why [Company Name]}
+}
+
+\vspace{0.05cm}
+
+\noindent%
+{\color{secondary}\sffamily\small
+  [Company Name] moves fast and takes security seriously — not as a checklist,
+  but as an architectural reflex. That combination is rare, and it's exactly the
+  engineering culture I'm built for. Three signals drew me here:
+  \textbf{(1)} your public engineering work
+  {[}e.g., zero-trust blog post, open-source tooling, SRE post-mortems\textbf{]}
+  shows a team that thinks in systems, not just features;
+  \textbf{(2)} your hiring process
+  {[}e.g., practical technical screen, take-home project, panel architecture review\textbf{]}
+  tells me you evaluate for the skills the job actually requires;
+  and \textbf{(3)} your product solves a problem I find genuinely interesting.
+  I'm not looking for any engineering role — I'm looking for a team whose standards
+  I'd be proud to meet and whose work I'd learn from.
+}
+
+\vspace{0.3cm}
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  WHAT I BRING — Narrative bullets: situation → action → measurable outcome
+%  Round 2 improvements: HR-validated bold metrics, mentorship outcome, CTA fix
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent%
+{\raggedright\sffamily\small\color{secondary}
+  \llap{\color{accent}\rule[0.12ex]{3pt}{1em}\hspace{0.35em}}\textbf{What I Bring to the Table}
+}
+
+\vspace{0.1cm}
+
+\noindent%
+{\color{secondary}\sffamily\small
+
+  \textbf{Found and fixed two critical vulnerabilities before production — saving an estimated \textbf{€200k+}.}
+  \textit{Background:} As an ISO 27001 auditor and penetration tester I assessed
+  20+ client systems across finance, healthcare, and technology. Using OWASP Top 10
+  threat modelling, SAST/DAST tooling, and CVSS-scored remediation reports, I
+  identified two critical findings — an insecure deserialisation flaw and an
+  over-privileged service account. Both were resolved pre-deployment. The result was
+  not just a cleaner audit: it was \textbf{€200k+} in avoided incident response,
+  regulatory fines, and reputational exposure.
+
+  \vspace{0.12cm}
+
+  \textbf{Rebuilt a broken deployment pipeline: \textbf{2-day manual releases} $\rightarrow$ \textbf{sub-15-minute continuous delivery}.}
+  \textit{Problem:} Bi-weekly shipping, three manual approval gates per deploy, and a
+  third of on-call escalations traceable to bad releases. \textit{What I did:}
+  Designed and implemented a GitHub Actions pipeline with Docker containerisation,
+  Kubernetes blue/green rollouts, and automated security gates — SAST scans,
+  container image scanning, and secret detection baked into CI, not bolted on after.
+  Mentored two junior engineers through the transition; both now independently manage
+  production deployments. \textit{Outcome:} deploy frequency increased \textbf{10$\times$},
+  on-call incidents from bad deploys dropped to near zero, and the team reclaimed
+  two engineering days per week.
+
+  \vspace{0.12cm}
+
+  \textbf{Deployed ML to production: \textbf{95\% accuracy}, \textbf{60\% labour reduction}, running today.}
+  \textit{Constraint:} 10,000 labelled satellite images, six-week window.
+  \textit{Decision:} ResNet50 transfer learning — borrowing a pre-trained network's
+  feature detectors and fine-tuning the final layers on a small target dataset.
+  The right architectural call for the data reality, not the textbook ideal.
+  Containerised the inference service, deployed it as a Kubernetes microservice,
+  and built monitoring to catch model drift. The system replaced manual survey
+  labour and has run in production ever since.
+
+  \vspace{0.12cm}
+
+  \textbf{Led end-to-end delivery of a full-stack product: \textbf{4.7/5 client satisfaction}, on time.}
+  \textit{Scope:} React/TypeScript front-end, Python/FastAPI back-end, PostgreSQL
+  data layer, Azure infrastructure — delivered in six weeks. My role was architecture
+  and technical delivery: running requirements trade-off conversations,
+  making the call on build-vs-buy for the auth layer, and ensuring the security review
+  happened before go-live, not after. The \textbf{4.7/5} reflected scores across
+  technical quality, communication, and commitment to agreed scope.
+}
+
+\vspace{0.3cm}
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  SKILLS — DevSecOps-forward
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent%
+{\color{secondary}\sffamily\small
+  \skillpill{Python} \skillpill{TypeScript} \skillpill{React} \skillpill{Node.js}
+  \skillpill{FastAPI} \skillpill{Kubernetes} \skillpill{Docker}
+  \skillpill{PostgreSQL} \skillpill{Azure} \skillpill{GitHub Actions}
+  \skillpill{Terraform} \skillpill{CI/CD} \skillpill{DevSecOps}
+  \skillpill{ISO 27001} \skillpill{OWASP} \skillpill{Penetration Testing}
+}
+
+\vspace{0.3cm}
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  CTA — Specific, grounded, low-friction close (HR-validated improvement)
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent%
+{\color{secondary}\sffamily\small
+  I'm based in Dublin (IST, UTC+1), available for immediate start, and specifically
+  interested in roles where engineering quality and security discipline are treated
+  as design criteria, not afterthoughts. I respond to all serious inquiries within
+  one business day.
+
+  If this sounds like a two-way fit, I'd welcome the chance to discuss your team's
+  next challenge — and specifically how my background in offensive security can
+  make your engineering team measurably stronger. Reach me at
+  \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}duyuanshuo@gmail.com}
+  or \href{tel:+353894546468}{\color{accent}+353 89 454 6468}.
+}
+
+\vspace{0.3cm}
+
+\noindent%
+{\color{secondary}\sffamily\small Warm regards,}\\[0.25cm]
+{\sffamily\bfseries\Large\color{namecolor} Yuanshuo Du}\\[0.05cm]
+{\sffamily\small\color{muted} Full-Stack Engineer · Security-First · Dublin, Ireland}
+
+\end{document}
