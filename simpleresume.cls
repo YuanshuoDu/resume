@@ -50,12 +50,12 @@
 % ── Section titles: left accent bar ─────────────────────────────────────────
 \titleformat{\section}{%
   \normalsize\sffamily\bfseries\color{primary}%
-  \addtolength{\spaceskip}{0.1em}%
+  \addtolength{\spaceskip}{0.06em}%
   \raggedright
 }{%
-  \llap{\color{accent}\rule[0.12ex]{3pt}{1.1em}\hspace{0.38em}}% left accent bar
+  \llap{\color{accent}\rule[0.15ex]{2.5pt}{0.95em}\hspace{0.28em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{1.1ex}{0.35ex}
+\titlespacing*{\section}{0pt}{0.85ex}{0.4ex}
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt}
