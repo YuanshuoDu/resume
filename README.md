@@ -1,33 +1,34 @@
-# Resume
+# Yuanshuo Du — Resumes
 
-My LaTeX resume using Awesome-CV template, automatically built and deployed via GitHub Actions.
+LaTeX resumes built via GitHub Actions, deployed to GitHub Pages.
 
-## Live PDFs
+## 🎯 Live PDFs
 
-👀 **Resume:** https://yuanshuodu.github.io/resume/resume.pdf
+### Product Manager — EverDish Branch
+> n8n · CI/CD · React/MUI · B2B SaaS · retail/POS
 
-👀 **Cover Letter:** https://yuanshuodu.github.io/resume/coverletter.pdf
+| Document | GitHub Pages | Raw Link |
+|----------|-------------|----------|
+| 📄 Resume | [yuanshuodu.github.io/resume/everdish/resume.pdf](https://yuanshuodu.github.io/resume/everdish/resume.pdf) | [raw](https://raw.githubusercontent.com/YuanshuoDu/resume/everdish/resume.pdf) |
+| 📩 Cover Letter | [yuanshuodu.github.io/resume/everdish/coverletter.pdf](https://yuanshuodu.github.io/resume/everdish/coverletter.pdf) | [raw](https://raw.githubusercontent.com/YuanshuoDu/resume/everdish/coverletter.pdf) |
 
-## Build Status
+## 🌿 All Branches
 
-| Branch | Status |
-|--------|--------|
-| main   | ✅ Auto-built |
-| everdish | ✅ PM-focused (n8n · CI/CD · React · B2B SaaS) |
+| Branch | Focus | Resume | Cover Letter |
+|--------|-------|--------|-------------|
+| **everdish** | Product Manager — n8n, React/MUI, CI/CD, B2B SaaS | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/everdish/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/everdish/coverletter.pdf) |
+| **frontend** | React, TypeScript, Next.js, MUI, Redux | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/frontend/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/frontend/coverletter.pdf) |
+| **devops** | Azure, Kubernetes, Docker, CI/CD, Terraform | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/devops/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/devops/coverletter.pdf) |
+| **security** | ISO 27001, DevSecOps, SAST/DAST, KnowBe4 | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/security/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/security/coverletter.pdf) |
+| **data-ai-ml** | Python, CNN (ResNet50/R-CNN), GIS, Deep Learning | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/data-ai-ml/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/data-ai-ml/coverletter.pdf) |
+| **main** | Clean base (no resume content) | — | — |
 
-## Auto-Build
+## ⚙️ Auto-Build
 
-Every push to `main` automatically:
-1. Compiles LaTeX → PDF
-2. Deploys to GitHub Pages
+Every push to `main` automatically compiles LaTeX → PDF and deploys to GitHub Pages.
 
-## Branches
+## 📌 Branch Rules
 
-| Branch | Focus |
-|--------|-------|
-| main | Clean base |
-| everdish | Product Manager — n8n, React/MUI, CI/CD, B2B SaaS, retail |
-| devops | Azure/K8s/Docker/CI/CD |
-| frontend | React/TypeScript/Next.js/MUI |
-| security | ISO 27001/DevSecOps/KnowBe4 |
-| data-ai-ml | Python/CNN/GIS/Deep Learning |
+- **main** — clean base, no content merges
+- **each branch** — independent, self-contained, CI-built on push
+- **GitHub Pages** — serves as a directory index to all branch raw PDFs
