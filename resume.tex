@@ -1,6 +1,8 @@
 \documentclass{simpleresume}
 \usepackage{fontawesome5}
 \usepackage{paralist}
+\usepackage{setspace}
+\setstretch{1.15}
 \begin{document}
 
 \begin{center}
@@ -20,8 +22,11 @@
 \headerrule
 
 \section{Summary}
-\noindent{\color{secondary}\small\relax
-  Information Security Specialist with ISO 27001 Lead Auditor credentials and full-stack engineering background. Delivered KnowBe4 phishing campaigns to 5,000+ users (--25\% click rate, +80\% participation) and led ISO 27001 certification for multinational pharma clients. Combines technical depth (Python, Azure, SAST/DAST) with governance rigour (GDPR, risk frameworks) to bridge security and business objectives.\normalsize}
+\nopagebreak
+\begin{spacing}{1.15}
+\noindent{\sffamily\small\color{secondary}
+  \textbf{Information Security Specialist} with ISO 27001 Lead Auditor credentials and full-stack engineering background. Delivered KnowBe4 phishing campaigns to 5,000+ users (\textbf{--25\% click rate, +80\% participation}) and led ISO 27001 certification for multinational pharma clients. Combines technical depth (Python, Azure, SAST/DAST) with governance rigour (GDPR, risk frameworks) to bridge security and business objectives.\par}
+\end{spacing}
 
 \section{Skills}
 \begin{flushleft}
@@ -48,29 +53,33 @@
 \end{flushleft}
 
 \section{Professional Experience}
-\noindent\textbf{Information Security Specialist} \hfill{\sffamily\scshape\small\color{secondary}InsightSec, Shanghai} \hfill{\sffamily\scshape\small\color{muted}Apr 2021 -- Dec 2022}
 \begin{compactitem}
+  \item\textbf{Information Security Specialist}\hfill{\sffamily\scshape\small\color{muted}Apr 2021 -- Dec 2022}
+  \hspace*{1.25em}{\sffamily\scshape\small\color{secondary}InsightSec, Shanghai}
   \item Led 20+ penetration testing engagements (OWASP/NIST) across finance, healthcare, and tech --- remediated 20+ critical vulnerabilities; reduced client risk exposure by 70\%
   \item Coordinated Agile teams across 5+ ISO 27001 certification projects --- zero major non-conformities; on-time and within budget
   \item Applied security-first engineering: XSS prevention, CSRF mitigation, secure JWT/OAuth token handling
 \end{compactitem}
 
 \section{Key Projects}
-\noindent\textbf{YumChina Data Security Day} \hfill{\sffamily\scshape\small\color{muted}2022}
+\vspace{0.12cm}
+\noindent\textbf{YumChina Data Security Day}\hfill{\sffamily\scshape\small\color{muted}2022}
 \newline
 {\itshape\color{accent}\footnotesize KnowBe4 \quad Phishing Simulation \quad Azure AD \quad Social Engineering}
 \begin{compactitem}
-  \item Designed and executed KnowBe4 phishing campaigns across 5,000+ users in 8 business units --- achieved --25\% click rate and +80\% participation rate within one year
+  \item Designed and executed KnowBe4 phishing campaigns across 5,000+ users in 8 business units --- achieved \textbf{--25\% click rate} and \textbf{+80\% participation rate} within one year
   \item Correlated simulated attack data with Azure AD telemetry to identify high-risk clusters; delivered targeted follow-up training that reduced repeat clicks by 60\%
 \end{compactitem}
-\noindent\textbf{Xihua Pharma ISO 27001 Certification (Project Lead)} \hfill{\sffamily\scshape\small\color{muted}2021--2022}
+\vspace{0.18cm}
+\noindent\textbf{Xihua Pharma ISO 27001 Certification (Project Lead)}\hfill{\sffamily\scshape\small\color{muted}2021--2022}
 \newline
 {\itshape\color{accent}\footnotesize ISO 27001 \quad Gap Analysis \quad Risk Assessment \quad 200+ Policy Documents}
 \begin{compactitem}
   \item Led end-to-end ISO 27001 certification: gap analysis against Annex A and Clauses 4-10, authored 200+ ISMS documents (policies, procedures, risk registers)
   \item Coordinated 15+ SME pool across IT, Operations, and Compliance; managed 2 external auditor reviews with zero major non-conformities
 \end{compactitem}
-\noindent\textbf{Decathlon Cloud Security Training} \hfill{\sffamily\scshape\small\color{muted}2022}
+\vspace{0.18cm}
+\noindent\textbf{Decathlon Cloud Security Training}\hfill{\sffamily\scshape\small\color{muted}2022}
 \newline
 {\itshape\color{accent}\footnotesize Cloud Security \quad Multi-region \quad Azure \quad Role-based Training}
 \begin{compactitem}
