@@ -1,8 +1,10 @@
 # Yuanshuo Du — Resumes
 
+LaTeX resumes built via GitHub Actions, deployed to GitHub Pages.
+
 ## 🎯 This Branch: SECURITY
 
-DevSecOps · SAST/DAST · KnowBe4 · ISO 27001 · GDPR
+Python · CNN (ResNet50/R-CNN) · Satellite Imagery · Deep Learning · GIS
 
 ## 📄 Live PDFs
 
@@ -15,6 +17,7 @@ DevSecOps · SAST/DAST · KnowBe4 · ISO 27001 · GDPR
 
 | Branch | Focus | Resume | Cover Letter |
 |--------|-------|--------|-------------|
+| **main** | Clean base | <a href="https://github.com/YuanshuoDu/resume/blob/main/resume.pdf" target="_blank" rel="noopener">📄 PDF</a> | <a href="https://github.com/YuanshuoDu/resume/blob/main/coverletter.pdf" target="_blank" rel="noopener">📩 PDF</a> |
 | **everdish** | Product Manager — n8n, React/MUI, CI/CD, B2B SaaS | <a href="https://github.com/YuanshuoDu/resume/blob/everdish/resume.pdf" target="_blank" rel="noopener">📄 PDF</a> | <a href="https://github.com/YuanshuoDu/resume/blob/everdish/coverletter.pdf" target="_blank" rel="noopener">📩 PDF</a> |
 | **frontend** | React, TypeScript, Next.js, MUI, Redux | <a href="https://github.com/YuanshuoDu/resume/blob/frontend/resume.pdf" target="_blank" rel="noopener">📄 PDF</a> | <a href="https://github.com/YuanshuoDu/resume/blob/frontend/coverletter.pdf" target="_blank" rel="noopener">📩 PDF</a> |
 | **devops** | Azure, Kubernetes, Docker, CI/CD, Terraform | <a href="https://github.com/YuanshuoDu/resume/blob/devops/resume.pdf" target="_blank" rel="noopener">📄 PDF</a> | <a href="https://github.com/YuanshuoDu/resume/blob/devops/coverletter.pdf" target="_blank" rel="noopener">📩 PDF</a> |
