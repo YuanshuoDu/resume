@@ -37,8 +37,10 @@ jobs:
       - name: Prepare artifact
         run: |
           mkdir -p resume-artifact
-          mv resume.pdf resume-artifact/YuanshuoDu_Resume.pdf
-          mv coverletter.pdf resume-artifact/YuanshuoDu_CoverLetter.pdf
+          cp resume.pdf resume-artifact/resume.pdf
+          cp coverletter.pdf resume-artifact/coverletter.pdf
+          cp index.html resume-artifact/ 2>/dev/null || true
+          cp .nojekyll resume-artifact/ 2>/dev/null || true
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v4
