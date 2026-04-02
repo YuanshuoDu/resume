@@ -1,22 +1,24 @@
-# Resume
+# Yuanshuo Du — Resumes
 
-My LaTeX resume using Awesome-CV template, automatically built and deployed via GitHub Actions.
+## 🎯 This Branch: Security / ISO 27001
 
-## Live PDFs
+DevSecOps · SAST/DAST · KnowBe4 · ISO 27001 · GDPR · Penetration Testing
 
-👀 **Resume:** https://yuanshuodu.github.io/resume/YuanshuoDu_Resume.pdf
+## 📄 Live PDFs
 
-👀 **Cover Letter:** https://yuanshuodu.github.io/resume/YuanshuoDu_CoverLetter.pdf
+| Document | Link |
+|----------|------|
+| 📄 Resume | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/security/resume.pdf) |
+| 📩 Cover Letter | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/security/coverletter.pdf) |
 
-## Build Status
+## 🌿 All Branches
 
-| Branch | Status |
-|--------|--------|
-| main   | ✅ Auto-built |
+| Branch | Focus | Resume | Cover Letter |
+|--------|-------|--------|-------------|
+| **everdish** | Product Manager | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/everdish/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/everdish/coverletter.pdf) |
+| **frontend** | React, TypeScript | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/frontend/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/frontend/coverletter.pdf) |
+| **devops** | Azure, K8s, CI/CD | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/devops/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/devops/coverletter.pdf) |
+| **security** | ISO 27001, DevSecOps | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/security/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/security/coverletter.pdf) |
+| **data-ai-ml** | Python, CNN, GIS | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/data-ai-ml/resume.pdf) | [PDF](https://raw.githubusercontent.com/YuanshuoDu/resume/data-ai-ml/coverletter.pdf) |
 
-## Auto-Build
-
-Every push to `main` automatically:
-1. Compiles LaTeX → PDF
-2. Deploys to GitHub Pages
-
+Built with LaTeX + GitHub Actions.
