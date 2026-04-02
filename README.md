@@ -4,9 +4,9 @@ My LaTeX resume using Awesome-CV template, automatically built and deployed via 
 
 ## Live PDFs
 
-👀 **Resume:** https://yuanshuodu.github.io/resume/YuanshuoDu_Resume.pdf
+👀 **Resume:** https://raw.githubusercontent.com/YuanshuoDu/resume/main/resume.pdf
 
-👀 **Cover Letter:** https://yuanshuodu.github.io/resume/YuanshuoDu_CoverLetter.pdf
+👀 **Cover Letter:** https://raw.githubusercontent.com/YuanshuoDu/resume/main/coverletter.pdf
 
 ## Build Status
 
@@ -19,4 +19,3 @@ My LaTeX resume using Awesome-CV template, automatically built and deployed via 
 Every push to `main` automatically:
 1. Compiles LaTeX → PDF
 2. Deploys to GitHub Pages
-
