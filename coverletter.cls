@@ -27,10 +27,9 @@
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — accent bars, links
 \definecolor{accentmid}{RGB}{147,197,253}  % Blue-300 — divider accent
 \definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — body text
-\definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, meta
-\definecolor{rule}{RGB}{226,232,240}       % Slate-200 — dividers
+\definecolor{muted}{RGB}{71,85,105}        % Slate-600 — dates, meta (darkened)
+\definecolor{rule}{RGB}{200,210,220}       % Slate-300 — dividers (darkened)
 \definecolor{headerbar}{RGB}{37,99,235}    % Blue-600 — top bar
-\definecolor{headerbar2}{RGB}{99,179,237}  % Blue-400 — gradient strip
 \definecolor{namecolor}{RGB}{15,23,42}    % Slate-900 — name
 
 % ── Page geometry ────────────────────────────────────────────────────────────
@@ -45,13 +44,11 @@
   linkbordercolor=accentmid,
 }
 
-% ── Page top accent bar with subtle gradient strip ───────────────────────────
+% ── Page top accent bar — single slim bar ───────────────────────────────────
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt){%
-      \textcolor{headerbar}{\rule{\paperwidth}{4pt}}}%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}}%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-7pt\relax){%
+      \textcolor{headerbar}{\rule{\paperwidth}{2pt}}}%
   }%
 }
 
@@ -77,12 +74,11 @@
 
 % ── Accent rule helper ────────────────────────────────────────────────────────
 \newcommand{\clrule}{%
-  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{1.5pt}}\par
+  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{2pt}}\par
   \nopagebreak\vspace{0.2cm}%
 }
 
 % ── Skill pill (muted — cover-letter appropriate) ─────────────────────────────
-% Muted from resume-style vivid blue to slate for a more editorial feel
 \def\skillpill#1{%
   {{\rmfamily\small\color{secondary}%
     \kern0.06em\relax%
@@ -96,7 +92,6 @@
 }
 
 % ── Contact icon shortcut (text-based, no external font needed) ─────────────
-% Uses small coloured text labels instead of icon fonts for reliability
 \def\cllabel#1{{\sffamily\small\color{accent}\textbf{#1}}\ }
 
 \endinput
