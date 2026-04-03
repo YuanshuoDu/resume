@@ -2,7 +2,7 @@ name: Build Resume & Cover Letter PDFs
 
 on:
   push:
-    branches: [main]
+    branches: [main, devops, frontend, security, data-ai-ml]
   workflow_dispatch:
 
 jobs:
