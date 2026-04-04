@@ -32,7 +32,7 @@
 \definecolor{headerbar}{RGB}{37,99,235}    % Blue-600 — top page bar
 \definecolor{headerbar2}{RGB}{99,179,237}  % Blue-400 — subtle gradient strip
 \definecolor{namecolor}{RGB}{15,23,42}    % Slate-900 — name
-\definecolor{skillbg}{RGB}{239,246,255}    % Blue-50 — skills pill bg
+\definecolor{skillbg}{RGB}{219,234,254}    % Blue-50 — skills pill bg
 \definecolor{skilltext}{RGB}{29,78,216}   % Blue-700 — skills pill text
 \definecolor{summarybg}{RGB}{248,250,253} % Slate-50 — summary background
 

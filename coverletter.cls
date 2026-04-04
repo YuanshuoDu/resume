@@ -31,6 +31,8 @@
 \definecolor{rule}{RGB}{200,210,220}       % Slate-300 — dividers (darkened)
 \definecolor{headerbar}{RGB}{37,99,235}    % Blue-600 — top bar
 \definecolor{namecolor}{RGB}{15,23,42}    % Slate-900 — name
+\definecolor{skillbg}{RGB}{219,234,254}    % Blue-100 — skills pill bg (visible on white)
+\definecolor{skilltext}{RGB}{29,78,216}   % Blue-700 — skills pill text (high contrast)
 
 % ── Page geometry ────────────────────────────────────────────────────────────
 \geometry{a4paper,left=1.7cm,top=1.2cm,right=1.7cm,bottom=1.2cm}
@@ -78,14 +80,14 @@
   \nopagebreak\vspace{0.2cm}%
 }
 
-% ── Skill pill (muted — cover-letter appropriate) ─────────────────────────────
+% ── Skill pill (blue pill matching resume style — high contrast for ATS) ──────
 \def\skillpill#1{%
-  {{\rmfamily\small\color{secondary}%
+  {{\rmfamily\small\color{skilltext}%
     \kern0.06em\relax%
     \setlength{\fboxrule}{0pt}%
     \setlength{\fboxsep}{0.35em}%
     \raisebox{0.22ex}{%
-      \colorbox{muted!15}{\kern0.06em\relax#1\kern0.06em\relax}%
+      \colorbox{skillbg}{\kern0.06em\relax#1\kern0.06em\relax}%
     }%
     \kern0.06em\relax
   }}%
@@ -93,5 +95,3 @@
 
 % ── Contact icon shortcut (text-based, no external font needed) ─────────────
 \def\cllabel#1{{\sffamily\small\color{accent}\textbf{#1}}\ }
-
-\endinput
