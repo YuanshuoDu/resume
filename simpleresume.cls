@@ -27,7 +27,7 @@
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — bullets, links, accent bars
 \definecolor{accentmid}{RGB}{147,197,253}  % Blue-300 — divider accent
 \definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — company names, meta
-\definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, secondary labels
+\definecolor{muted}{RGB}{71,85,105}       % Slate-600 — dates, secondary labels (~4.7:1 on white, passes WCAG AA)
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
 \definecolor{headerbar}{RGB}{37,99,235}    % Blue-600 — top page bar
 \definecolor{headerbar2}{RGB}{99,179,237}  % Blue-400 — subtle gradient strip
