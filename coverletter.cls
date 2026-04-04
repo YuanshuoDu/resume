@@ -50,7 +50,7 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-7pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{2pt}}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{3pt}}}%
   }%
 }
 
@@ -76,7 +76,7 @@
 
 % ── Accent rule helper ────────────────────────────────────────────────────────
 \newcommand{\clrule}{%
-  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{2pt}}\par
+  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{2.5pt}}\par
   \nopagebreak\vspace{0.2cm}%
 }
 

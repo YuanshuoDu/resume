@@ -54,7 +54,7 @@
   \addtolength{\spaceskip}{0.1em}%
   \raggedright
 }{%
-  \llap{\color{accent}\rule[0.12ex]{3pt}{1.1em}\hspace{0.38em}}% left accent bar
+  \llap{\color{accent}\rule[0.12ex]{3.5pt}{1.25em}\hspace{0.38em}}% left accent bar
 }{0em}{}
 \titlespacing*{\section}{0pt}{1.1ex}{0.35ex}
 
@@ -71,14 +71,14 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-7pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{2pt}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{3pt}}%
     }%
   }%
 }
 
 % ── Header rule divider ───────────────────────────────────────────────────────
 \newcommand{\headerrule}{%
-  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{2pt}}\par
+  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{2.5pt}}\par
   \nopagebreak\vspace{0.3cm}%
 }
 
