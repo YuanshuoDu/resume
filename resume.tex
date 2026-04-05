@@ -1,6 +1,5 @@
 \documentclass{simpleresume}
 \usepackage{fontawesome5}
-\geometry{a4paper,left=1.7cm,top=1.0cm,right=1.7cm,bottom=1.2cm}
 
 \begin{document}
 
@@ -24,17 +23,17 @@
 
 % ── Summary ───────────────────────────────────────────────────────────────────
 \section{Summary}
-\vspace{-0.05cm}
-\noindent\colorbox{accent!8}{%
+\vspace{0.08cm}
+\noindent\colorbox{accent!15}{%
   \parbox{\dimexpr\linewidth-2pt}{%
     \hspace{0.15cm}\parbox{\dimexpr\linewidth-0.30cm}{%
+      \vspace{0.08cm}%
       {\color{secondary}\small
-        Data and ML-focused computer scientist with 2+ years of IT consulting experience
-        delivering AI/analytics projects for international clients. Published researcher with
-        expertise in CNN architectures (ResNet50, R-CNN) for satellite imagery and computer vision.
-        Daily practitioner of AI tools (Claude, n8n) for data pipeline automation and documentation.
-        Proven track record in building RAG-powered retrieval systems and coordinating
-        data/engineering teams in Agile/Scrum environments.%
+        Data and ML-focused computer scientist (2+ yrs IT consulting) delivering AI/analytics
+        projects for international clients. Published researcher specialising in CNN architectures
+        (ResNet50, R-CNN) for satellite imagery and computer vision. Daily AI-tool practitioner
+        (Claude, n8n) for data pipeline automation. Built RAG-powered retrieval systems in
+        production; led cross-functional teams in Agile/Scrum environments.%
       }%
     }%
   }%
@@ -43,63 +42,68 @@
 
 % ── Skills ───────────────────────────────────────────────────────────────────
 \section{Skills}
-\vspace{0.04cm}
+\vspace{0.10cm}
 \noindent
 \begin{tabular}{p{2.4cm}p{14.0cm}}
-\textbf{Data / ML} & Python, CNN (ResNet50, R-CNN), Deep Learning, GIS, Satellite Image Processing, RAG, BM25, PostgreSQL, MongoDB \\[-2pt]
-\textbf{AI Tools} & Claude API (daily use), n8n workflow automation, OpenClaw agent orchestration, prompt engineering \\[-2pt]
-\textbf{Technical} & React.js, Next.js, Node.js, Go, FastAPI, REST API, Git, Docker, Kubernetes \\[-2pt]
-\textbf{Languages} & Chinese (native), English (professional), Hungarian (conversational) \\
+\textbf{Data / ML}    & Python, CNN (ResNet50, R-CNN), Deep Learning, GIS, Satellite Image Processing, RAG, BM25, PostgreSQL, MongoDB \\[-2pt]
+\textbf{AI Tools}      & Claude API (daily use), n8n workflow automation, OpenClaw agent orchestration, prompt engineering \\[-2pt]
+\textbf{Technical}     & React.js, Next.js, Node.js, Go, FastAPI, REST API, Git, Docker, Kubernetes, Azure, CI/CD \\[-2pt]
+\textbf{Languages}     & Chinese (native), English (professional), Hungarian (conversational) \\
 \end{tabular}
 \vspace{0.08cm}
 
 % ── Experience ────────────────────────────────────────────────────────────────
 \section{Professional Experience}
-\vspace{0.04cm}
+\vspace{0.08cm}
 \noindent\textbf{Information Technology Consultant}
   \hfill{\sffamily\scshape\small\color{secondary}InsightSec, Shanghai}
   \hfill{\sffamily\scshape\small\color{muted}Mar 2021 -- Dec 2022}\\
   {\itshape\color{accent}\footnotesize Data Analysis \quad\textbullet\quad IT Consulting \quad\textbullet\quad Agile Project Management}
 \vspace{-0.20mm}
 \begin{itemize}
-  \item Tracked and analyzed CSR metrics for China's Top 500 enterprises; contributed to national CSR white paper data collection
-  \item Authored \textbf{functional specifications and data analysis documentation} for enterprise clients; applied \textbf{Agile/Scrum} across all engagements
+  \item Tracked and analysed CSR metrics for China's Top 500 enterprises; contributed to national CSR white paper data collection; authored functional specifications and data analysis documentation for enterprise clients
+  \item Applied \textbf{Agile/Scrum} across all engagements; co-ordinated cross-functional teams to deliver client-facing IT solutions on schedule and within scope
 \end{itemize}
 
-\vspace{0.08cm}
+\vspace{0.10cm}
 \noindent\textbf{Software Engineer (Intern)}
   \hfill{\sffamily\scshape\small\color{secondary}Stealth Startup (AI)}
   \hfill{\sffamily\scshape\small\color{muted}Mar 2024 -- Oct 2024}\\
   {\itshape\color{accent}\footnotesize AI Product Development \quad\textbullet\quad Data Pipelines \quad\textbullet\quad RAG Architecture}
 \vspace{-0.20mm}
 \begin{itemize}
-  \item Built AI-powered features using \textbf{RAG architecture} and Claude API for document processing and answer generation
-  \item Developed automated data pipelines; collaborated with product and engineering teams in Agile sprints
+  \item Built AI-powered features using \textbf{RAG architecture} and Claude API for document processing and answer generation; integrated into an AI product serving daily active users
+  \item Developed automated data pipelines via n8n and GitHub Actions; collaborated with product and engineering teams in Agile sprints
 \end{itemize}
 
 % ── Technical Projects ──────────────────────────────────────────────────────────
 \section{Technical Projects}
-\vspace{0.04cm}
+\vspace{0.08cm}
 \noindent\textbf{Smart Parking Space Detection System}
   \hfill{\sffamily\scshape\small\color{muted}MSc CS Dissertation (Sep -- Dec 2024)}\\
   {\itshape\color{accent}\footnotesize Python \quad\textbullet\quad ResNet50 \quad\textbullet\quad R-CNN \quad\textbullet\quad Satellite Imagery \quad\textbullet\quad Go \quad\textbullet\quad PostgreSQL}
 \vspace{-0.20mm}
 \begin{itemize}
-  \item Built CNN models (\textbf{ResNet50, R-CNN}) for parking space detection from satellite imagery --- achieved 95\% accuracy on test dataset
-  \item Designed GIS-based data pipeline for urban public amenity analysis; deployed via K8s/Docker; co-authored and published at \textit{EduLearn25}
+  \item Built CNN models (\textbf{ResNet50, R-CNN}) for parking space detection from satellite imagery --- achieved 95\% accuracy on test dataset (10,000-image dataset, transfer learning)
+  \item Designed GIS-based data pipeline for urban public amenity analysis; containerised and deployed via Kubernetes on Azure with automated CI/CD (sub-15-min build pipelines); co-authored and published at \textit{EduLearn25}
 \end{itemize}
 
 % ── Education ─────────────────────────────────────────────────────────────────
 \section{Education}
-\vspace{0.04cm}
+\vspace{0.08cm}
 \noindent\textbf{MSc Computer Science}
   \hfill{\sffamily\scshape\small\color{secondary}Technological University Dublin}
   \hfill{\sffamily\scshape\small\color{muted}Sep 2023 -- Dec 2024}\\
   {\itshape\color{secondary}Deep Learning, Systems Architecture, Web App Architectures, Agile Methods}
 
-\vspace{0.08cm}
+\vspace{0.10cm}
 \noindent\textbf{MSc Management (International Business)}
   \hfill{\sffamily\scshape\small\color{secondary}University of Sheffield}
   \hfill{\sffamily\scshape\small\color{muted}Jun 2019 -- Mar 2021}\\
   {\itshape\color{secondary}Agile Project Management, Marketing, Data-Driven Decision Making}
+
+\vspace{0.08cm}
+\noindent\textbf{BSc Computer Science}
+  \hfill{\sffamily\scshape\small\color{secondary}Shanghai University}
+  \hfill{\sffamily\scshape\small\color{muted}Sep 2015 -- Jun 2019}
 \end{document}
