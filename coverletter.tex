@@ -4,10 +4,19 @@
 \begin{document}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  DATE LINE — Standard formal letter element
+%  LETTERHEAD — Date (right-aligned, formal)
+% ─────────────────────────────────────────────────────────────────────────────
+\noindent\raggedleft{\sffamily\small\color{secondary}April 5, 2026}\\[0.35cm]
+
+% ─────────────────────────────────────────────────────────────────────────────
+%  RECIPIENT BLOCK — ATS-standard addressee
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
-{\sffamily\small\color{secondary}April 2, 2026}
+{\sffamily\small\color{secondary}
+  Hiring Manager Name\\
+  Company Name\\
+  Address Line 1\\
+  City, Country}
 \vspace{0.25cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
@@ -15,7 +24,6 @@
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{center}
   {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.12cm]
-  % Row 1: GitHub · LinkedIn · Email (with icons)
   {\sffamily\small
     \href{https://github.com/YuanshuoDu}{\color{accent}\faGithub\color{muted}\ YuanshuoDu}
     \quad\textbullet\quad
@@ -23,7 +31,6 @@
     \quad\textbullet\quad
     \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\faEnvelope\color{muted}\ duyuanshuo@gmail.com}
   }\\[0.06cm]
-  % Row 2: Phone · Location (with icons)
   {\sffamily\small\color{muted}
     \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
     \quad\textbullet\quad
@@ -34,14 +41,14 @@
 \clrule
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  OPENING — Lead with the most impressive metric immediately
+%  OPENING — Lead with production impact, not accuracy theatre
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
   Dear Hiring Manager,
 }
 
-\vspace{0.20cm}
+\vspace{0.18cm}
 
 \noindent%
 {\color{secondary}\sffamily\small
@@ -53,92 +60,77 @@
   and it is why I am excited to bring that mindset to your team.
 }
 
-\vspace{0.28cm}
+\vspace{0.25cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  TAGLINE BLOCK — Visually prominent, stronger hierarchy
+%  TAGLINE BLOCK — Clean accent-bordered block
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 \begingroup
   \setlength{\fboxrule}{0pt}%
   \setlength{\fboxsep}{0pt}%
-  \colorbox{accent!15}{%
+  \colorbox{accent!10}{%
     \parbox{\linewidth}{%
-      \vspace{0.20cm}
-      \hspace{0.45cm}
-      \begin{minipage}{\dimexpr\linewidth-0.9cm}
-        {\sffamily\bfseries\LARGE\color{primary}
+      \vspace{0.18cm}
+      \hspace{0.40cm}
+      \begin{minipage}{\dimexpr\linewidth-0.80cm}
+        {\sffamily\bfseries\Large\color{primary}
           Ship production ML. Measure the impact.}
-        \vspace{0.08cm}
+        \vspace{0.06cm}
         {\sffamily\small\color{secondary}
           \faCode\ Data Scientist\quad
           \faGlobe\ ML Engineer\quad
           \faCheck\ Full-Stack Developer}
-        \vspace{0.20cm}
+        \vspace{0.18cm}
       \end{minipage}
     }%
   }%
 \endgroup
 
-\vspace{0.30cm}
+\vspace{0.25cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  WHY I'M INTERESTED — Concise, signals deep technical understanding
+%  WHY I'M INTERESTED — Role-specific, signals ownership
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
-{\sffamily\small\bfseries\color{primary}Why I'm Drawn to This Role}\par\nopagebreak\vspace{0.05cm}
+{\sffamily\small\bfseries\color{primary}Why I'm Drawn to This Role}\par\nopagebreak\vspace{0.06cm}
 
 \noindent%
 {\color{secondary}\sffamily\small
-  Teams that treat data pipelines and model deployment as first-class engineering
-  problems are where I do my best work. Roles spanning the full ML lifecycle ---
-  from data ingestion and feature engineering through to containerised model serving
-  behind a REST API --- are the natural continuation of everything I have built:
-  CNN-based satellite imagery analysis at 95\% accuracy feeding a production GIS
-  pipeline, RAG-powered document intelligence handling real production queries,
-  and fully-automated CI/CD pipelines that deploy to Kubernetes in under 15 minutes.
+  I am looking for teams where data pipelines and model deployment are treated as
+  first-class engineering problems --- not afterthoughts handed off to a separate
+  data science function. The roles I am most effective in span the full ML lifecycle:
+  from data ingestion and feature engineering, through to containerised model serving
+  behind a REST API. That is exactly the space where I have built my strongest work ---
+  a CNN-based satellite imagery pipeline at 95\% accuracy feeding a production GIS
+  system, a RAG-powered document intelligence product handling live production queries,
+  and automated CI/CD pipelines deploying to Kubernetes in under 15 minutes.
 }
 
-\vspace{0.28cm}
+\vspace{0.25cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  WHAT I BRING — STAR bullets, metrics-forward, ATS-optimized
+%  WHAT I BRING — STAR bullets with accent bullets, metrics-forward
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\sffamily\small\bfseries\color{primary}What I Bring to the Table}
 
-\vspace{0.10cm}
+\vspace{0.08cm}
 
 \begin{itemize}
-  \setlength\itemsep{0.20cm}
+  \setlength\itemsep{0.15cm}
   \setlength\parskip{0pt}
   \setlength{\parsep}{0pt}
-  \item[] {\color{secondary}\sffamily\small
-    \textbf{Trained and deployed a CNN (ResNet50) at 95\% accuracy in production,}
-    replacing 60\% of manual survey labour for parking space detection from satellite
-    imagery. Built the ML pipeline end-to-end: 10,000-image dataset, transfer learning,
-    containerised Kubernetes microservice on Azure with automated CI/CD. Research
-    co-authored and published at \textit{EduLearn25}.}%
-  \item[] {\color{secondary}\sffamily\small
-    \textbf{Designed and deployed a GIS-based urban data pipeline} processing satellite
-    imagery at scale, backed by PostgreSQL and MongoDB behind a REST API;
-    co-authored and published the full methodology at \textit{EduLearn25}.}%
-  \item[] {\color{secondary}\sffamily\small
-    \textbf{Built a RAG-powered document intelligence system} using Claude API and BM25
-    retrieval, handling real production queries for answer generation; integrated into
-    an AI product with daily active users and automated data pipelines via n8n
-    and GitHub Actions.}%
-  \item[] {\color{secondary}\sffamily\small
-    \textbf{Delivered a full-stack client engagement rated 4.7/5 in six weeks,}
-    leading a cross-functional team of 3 through React/TypeScript front-end,
-    Python/FastAPI back-end, PostgreSQL data layer, and Azure infrastructure ---
-    from architecture to production in Agile sprints.}%
+  \item {\color{secondary}\sffamily\small\textbf{Trained and deployed a CNN (ResNet50) at 95\% accuracy in production,} replacing 60\% of manual survey labour for parking space detection from satellite imagery. Built the ML pipeline end-to-end: 10,000-image dataset, transfer learning, containerised Kubernetes microservice on Azure with automated CI/CD. Research co-authored and published at \textit{EduLearn25}.}
+  \item {\color{secondary}\sffamily\small\textbf{Designed and deployed a GIS-based urban data pipeline} processing satellite imagery at scale, backed by PostgreSQL and MongoDB behind a REST API; co-authored and published the full methodology at \textit{EduLearn25}.}
+  \item {\color{secondary}\sffamily\small\textbf{Built a RAG-powered document intelligence system} using Claude API and BM25 retrieval, handling real production queries for answer generation; integrated into an AI product with daily active users and automated data pipelines via n8n and GitHub Actions.}
+  \item {\color{secondary}\sffamily\small\textbf{Delivered a full-stack client engagement rated 4.7/5 in six weeks,} leading a cross-functional team of 3 through React/TypeScript front-end, Python/FastAPI back-end, PostgreSQL data layer, and Azure infrastructure --- from architecture to production in Agile sprints.}
 \end{itemize}
 
-\vspace{0.28cm}
+\vspace{0.25cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  SKILLS — ATS keyword reinforcement
+%  SKILLS — ATS keyword reinforcement (pill format)
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
 {\color{secondary}\sffamily\small
@@ -151,7 +143,7 @@
   \skillpill{Agile/Scrum} \skillpill{prompt engineering}
 }
 
-\vspace{0.28cm}
+\vspace{0.25cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
 %  CTA + SIGN-OFF
@@ -167,7 +159,7 @@
   or \skillpill{+353 89 454 6468}.
 }
 
-\vspace{0.25cm}
+\vspace{0.22cm}
 
 \noindent%
 {\color{secondary}\sffamily\small Warm regards,}\\[0.20cm]
