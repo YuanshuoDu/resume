@@ -1,0 +1,41 @@
+name: Build EverDish Resume PDF
+
+on:
+  push:
+    branches: [everdish]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex latexmk fonts-freefont-otf
+
+      - name: Build Resume PDF
+        run: |
+          cp fonts/*.otf . 2>/dev/null || true
+          xelatex -interaction=nonstopmode resume.tex
+          xelatex -interaction=nonstopmode resume.tex
+          rm -f *.otf
+
+      - name: Build Cover Letter PDF
+        run: |
+          cp fonts/*.otf . 2>/dev/null || true
+          xelatex -interaction=nonstopmode coverletter.tex
+          xelatex -interaction=nonstopmode coverletter.tex
+          rm -f *.otf
+
+      - name: Commit PDFs back to everdish branch
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add resume.pdf coverletter.pdf
+          git diff --cached --quiet || (git commit -m "ci: rebuild PDFs [skip ci]" && git push)
