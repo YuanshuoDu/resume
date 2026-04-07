@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pages: write
       id-token: write
     steps:
@@ -33,6 +34,13 @@ jobs:
           xelatex -interaction=nonstopmode coverletter.tex
           xelatex -interaction=nonstopmode coverletter.tex
           rm -f *.otf
+
+      - name: Commit PDFs back to repo
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add resume.pdf coverletter.pdf
+          git diff --cached --quiet || (git commit -m "ci: rebuild PDFs [skip ci]" && git push)
 
       - name: Prepare artifact
         run: |
