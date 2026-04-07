@@ -22,14 +22,14 @@ jobs:
 
       - name: Build Resume PDF
         run: |
-          cp fonts/*.otf .
+          cp fonts/*.otf . 2>/dev/null || true
           xelatex -interaction=nonstopmode resume.tex
           xelatex -interaction=nonstopmode resume.tex
           rm -f *.otf
 
       - name: Build Cover Letter PDF
         run: |
-          cp fonts/*.otf .
+          cp fonts/*.otf . 2>/dev/null || true
           xelatex -interaction=nonstopmode coverletter.tex
           xelatex -interaction=nonstopmode coverletter.tex
           rm -f *.otf
