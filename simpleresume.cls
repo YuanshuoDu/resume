@@ -4,11 +4,13 @@
 \LoadClass{article}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{geometry}
+\RequirePackage{changepage}
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 \RequirePackage{eso-pic}
+\RequirePackage{setspace}
 \RequirePackage{array}
 \RequirePackage{fancyhdr}
 \RequirePackage{ragged2e}
