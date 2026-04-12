@@ -64,8 +64,8 @@
 \setlist[itemize]{%
   leftmargin=1.25em,
   label=\color{accent}\textbullet,
-  itemsep=0.06cm,
-  parsep=0.03cm,
+  itemsep=0.14cm,
+  parsep=0.06cm,
 }
 
 % ── Page top accent bar with subtle gradient strip ───────────────────────────
