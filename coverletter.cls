@@ -49,9 +49,9 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt){%
-      \textcolor{headerbar}{\rule{\paperwidth}{4pt}}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{5pt}}}%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}}%
+      \textcolor{headerbar2}{\rule{\paperwidth}{2pt}}}%
   }%
 }
 
@@ -77,7 +77,7 @@
 
 % ── Accent rule helper ────────────────────────────────────────────────────────
 \newcommand{\clrule}{%
-  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{1.5pt}}\par
+  \par\noindent\textcolor{accent}{\rule{\linewidth}{2pt}}\par
   \nopagebreak\vspace{0.2cm}%
 }
 

@@ -38,7 +38,7 @@
 \definecolor{skilltext}{RGB}{29,78,216}   % Blue-700 — skills pill text
 
 % ── Page geometry ────────────────────────────────────────────────────────────
-\geometry{a4paper,left=1.7cm,top=1.2cm,right=1.7cm,bottom=1.5cm}
+\geometry{a4paper,left=1.7cm,top=1.5cm,right=1.7cm,bottom=1.5cm}
 
 % ── Hyperlinks ───────────────────────────────────────────────────────────────
 \hypersetup{
@@ -55,7 +55,7 @@
   \addtolength{\spaceskip}{0.06em}%
   \raggedright
 }{%
-  \llap{\color{accent}\rule[0.15ex]{2.5pt}{0.95em}\hspace{0.28em}}% left accent bar
+  \llap{\color{accent}\rule[0.15ex]{3.5pt}{1.05em}\hspace{0.30em}}% left accent bar
 }{0em}{}
 \titlespacing*{\section}{0pt}{0.85ex}{0.4ex}
 
@@ -72,18 +72,18 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{3pt}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{5pt}}%
     }%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt\relax){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1pt}}%
+      \textcolor{headerbar2}{\rule{\paperwidth}{2pt}}%
     }%
   }%
 }
 
 % ── Header rule divider ───────────────────────────────────────────────────────
 \newcommand{\headerrule}{%
-  \par\noindent\textcolor{accentmid}{\rule{\linewidth}{1.5pt}}\par
-  \nopagebreak\vspace{0.25cm}%
+  \par\noindent\textcolor{accent}{\rule{\linewidth}{2pt}}\par
+  \nopagebreak\vspace{0.22cm}%
 }
 
 % ── Footer ───────────────────────────────────────────────────────────────────
