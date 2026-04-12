@@ -1,5 +1,8 @@
 \documentclass{coverletter}
 \usepackage{fontawesome5}
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\sffamily\bfseries\color{primary}\raggedright}{\llap{\color{accent}\rule[0.12ex]{2.5pt}{0.95em}\hspace{0.28em}}}{0em}{}
+\titlespacing*{\section}{0pt}{0.85ex}{0.4ex}
 
 \begin{document}
 
@@ -7,7 +10,7 @@
 %  HEADER — Name + Contact Icons
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{center}
-  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.12cm]
+  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.14cm]
   % Row 1: GitHub · LinkedIn · Email (with icons)
   {\sffamily\small
     \href{https://github.com/YuanshuoDu}{\color{accent}\faGithub\color{muted}\ YuanshuoDu}
@@ -15,7 +18,7 @@
     \href{https://linkedin.com/in/yuanshuodu}{\color{accent}\faLinkedin\color{muted}\ yuanshuodu}
     \quad\textbullet\quad
     \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\faEnvelope\color{muted}\ duyuanshuo@gmail.com}
-  }\\[0.06cm]
+  }\\[0.08cm]
   % Row 2: Phone · Location (with icons)
   {\sffamily\small\color{muted}
     \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
@@ -23,89 +26,68 @@
     \href{https://www.google.com/maps/place/Dublin,+Ireland}{\color{accent}\faMapMarker\color{muted}\ Dublin, Ireland}
   }
 \end{center}
-
-\clrule
+\par\noindent\textcolor{accentmid}{\rule{\linewidth}{2pt}}\par\nopagebreak\vspace{0.28cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  OPENING — Lead with a concrete, quantified DevOps win
+%  SALUTATION
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
-{\color{secondary}\sffamily\small
+{\sffamily\small\color{secondary}
   Dear Hiring Manager,
 }
 
 \vspace{0.22cm}
 
-\noindent%
-{\color{secondary}\sffamily\small
-  I reduced an enterprise client's manual deployment effort by \textbf{80\%} through CI/CD pipeline redesign --- and I bring that same drive to bridge infrastructure and product thinking to EverDish. With two years of IT consulting experience delivering infrastructure and automation projects for international enterprise clients, combined with hands-on DevOps practice (CI/CD, Docker, Kubernetes, AI workflow automation), I am excited to apply this technical foundation to EverDish's product and platform challenges.
+% ─────────────────────────────────────────────────────────────────────────────
+%  OPENING — Lead with a concrete, quantified DevOps win + section header
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Bridging infrastructure and product}
+\nopagebreak\noindent%
+{\sffamily\small\color{secondary}
+  I reduced an enterprise client's manual deployment effort by \textbf{80\%} through \textbf{CI/CD} pipeline redesign on \textbf{Linux} and \textbf{Azure} --- and I bring that same drive to bridge infrastructure and product thinking to EverDish. With two years of IT consulting experience delivering infrastructure and automation projects for international enterprise clients, combined with hands-on DevOps practice across \textbf{Docker}, \textbf{Kubernetes}, \textbf{Terraform}, and AI workflow automation, I am excited to apply this technical foundation to EverDish's product and platform challenges.
 }
 
-\vspace{0.35cm}
+\vspace{0.32cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
 %  BODY 1 — Cross-functional coordination & PRD experience (with metrics)
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent%
-{\color{secondary}\sffamily\small\bfseries\normalsize
-  Bridging business and engineering teams
+\section*{Bridging business and engineering teams}
+\nopagebreak\noindent%
+{\sffamily\small\color{secondary}
+  At InsightSec, I managed concurrent IT consulting engagements for international clients including \textbf{Decathlon} (France), \textbf{Splio} (France), and \textbf{YumChina} (China). I authored functional specifications, user stories, and test case documentation --- writing clear, actionable PRDs was a core part of the role. I ran sprint planning sessions, facilitated cross-functional stand-ups, and coordinated between developers, designers, and external stakeholders throughout the full delivery cycle across multiple time zones. This experience gave me deep respect for aligning technical teams around a shared product vision, and I am prepared to do the same for EverDish's engineering and restaurant-operations teams.
 }
 
-\vspace{0.12cm}
-
-\noindent%
-{\color{secondary}\sffamily\small
-  At InsightSec, I managed concurrent IT consulting engagements for international clients including Decathlon (France), Splio (France), and YumChina (China). I authored functional specifications, user stories, and test case documentation --- writing clear, actionable PRDs was a core part of the role. I ran sprint planning sessions, facilitated cross-functional stand-ups, and coordinated between developers, designers, and external stakeholders throughout the full delivery cycle across multiple time zones. This experience gave me deep respect for aligning technical teams around a shared product vision, and I am prepared to do the same for EverDish's engineering and restaurant-operations teams.
-}
-
-\vspace{0.30cm}
+\vspace{0.32cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
 %  BODY 2 — AI tools + workflow automation (DevOps angle → product speed)
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent%
-{\color{secondary}\sffamily\small\bfseries\normalsize
-  AI as a multiplier for product velocity
-}
-
-\vspace{0.12cm}
-
-\noindent%
-{\color{secondary}\sffamily\small
+\section*{AI as a multiplier for product velocity}
+\nopagebreak\noindent%
+{\sffamily\small\color{secondary}
   I use \textbf{Claude daily} for code review, PRD drafting, and structuring product decisions. I have built automated workflows with \textbf{n8n} and \textbf{OpenClaw} that orchestrate multi-platform processes without manual intervention, directly improving team throughput. For EverDish, I see concrete near-term applications: synthesizing voice-of-customer data from support channels into actionable backlog items, accelerating feature specification drafting, and automating competitive analysis. I want to build AI-native product processes from day one --- not retrofit them later.
 }
 
-\vspace{0.30cm}
+\vspace{0.32cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
 %  BODY 3 — Restaurant/ops experience relevant to EverDish's B2B SaaS product
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent%
-{\color{secondary}\sffamily\small\bfseries\normalsize
-  Understanding operations at the ground level
+\section*{Understanding operations at the ground level}
+\nopagebreak\noindent%
+{\sffamily\small\color{secondary}
+  Before software, I managed real operations: e-commerce fulfillment at scale across Amazon and Shopify (processing \textbf{200+ orders/week} during peak seasons, managing inventory across 3 warehouse locations), retail store management including POS-adjacent transactions, and direct customer interactions across multiple languages. This hands-on experience gives me an intuitive understanding of how restaurant operators think --- the priority of speed at peak hours, the pain of fragmented order channels, the need for tools that are reliable first and smart second. I know what it means when a system goes down during a dinner rush, and that informs how I approach reliability-first roadmap decisions.
 }
 
-\vspace{0.12cm}
-
-\noindent%
-{\color{secondary}\sffamily\small
-  Before software, I managed real operations: e-commerce fulfillment at scale across Amazon and Shopify (processing 200+ orders/week during peak seasons, managing inventory across 3 warehouse locations), retail store management including POS-adjacent transactions, and direct customer interactions across multiple languages. This hands-on experience gives me an intuitive understanding of how restaurant operators think --- the priority of speed at peak hours, the pain of fragmented order channels, the need for tools that are reliable first and smart second. I know what it means when a system goes down during a dinner rush, and that informs how I approach reliability-first roadmap decisions.
-}
-
-\vspace{0.30cm}
+\vspace{0.32cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
 %  BODY 4 — Why EverDish + language skills + differentiation close
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent%
-{\color{secondary}\sffamily\small\bfseries\normalsize
-  Why EverDish, and why now
-}
-
-\vspace{0.12cm}
-
-\noindent%
-{\color{secondary}\sffamily\small
+\section*{Why EverDish, and why now}
+\nopagebreak\noindent%
+{\sffamily\small\color{secondary}
   EverDish is solving a real, underserved problem for restaurant operators --- and the chance to build a product that staff rely on, not just tolerate, is what draws me to this role. I bring a differentiated combination: \textbf{technical DevOps credibility} to earn trust from EverDish's engineering team, \textbf{operational empathy} to represent restaurant users authentically, and a track record of delivering complex, multi-stakeholder projects on schedule. I am fluent in \textbf{Chinese and English}, which I understand is particularly relevant for EverDish's market position, and I bring working proficiency in Hungarian as well.
 }
 
@@ -115,14 +97,14 @@
 %  CLOSING
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
-{\color{secondary}\sffamily\small
+{\sffamily\small\color{secondary}
   I am excited about the possibility of contributing to EverDish's product journey and would welcome the opportunity to discuss how my background aligns with your needs. Thank you for your time and consideration.
 }
 
 \vspace{0.30cm}
 
 \noindent%
-{\color{secondary}\sffamily\small
+{\sffamily\small\color{secondary}
   Best regards,
 }
 
