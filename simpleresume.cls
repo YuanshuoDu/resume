@@ -72,10 +72,10 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{3pt}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{2pt}}%
     }%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt\relax){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1pt}}%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-1.5pt\relax){%
+      \textcolor{headerbar2}{\rule{\paperwidth}{0.75pt}}%
     }%
   }%
 }
