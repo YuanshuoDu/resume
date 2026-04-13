@@ -1,5 +1,9 @@
 \documentclass{coverletter}
 \usepackage{fontawesome5}
+\usepackage{setspace}
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\sffamily\bfseries\color{accent}\raggedright}{\llap{\rule[0.12ex]{3pt}{0.9em}\hspace{0.35em}}}{0em}{}
+\titlespacing*{\section}{0pt}{0.65ex}{0.25ex}
 
 \begin{document}
 
@@ -7,7 +11,7 @@
 %  HEADER — Name + Contact Icons
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{center}
-  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.12cm]
+  {\Large\sffamily\bfseries\color{namecolor} Yuanshuo Du}\\[0.16cm]
   % Row 1: GitHub · LinkedIn · Email (with icons)
   {\sffamily\small
     \href{https://github.com/YuanshuoDu}{\color{accent}\faGithub\color{muted}\ YuanshuoDu}
@@ -15,90 +19,93 @@
     \href{https://linkedin.com/in/yuanshuodu}{\color{accent}\faLinkedin\color{muted}\ yuanshuodu}
     \quad\textbullet\quad
     \href{https://mail.google.com/mail/?view=cm&to=duyuanshuo@gmail.com}{\color{accent}\faEnvelope\color{muted}\ duyuanshuo@gmail.com}
-  }\\[0.06cm]
+  }\\[0.09cm]
   % Row 2: Phone · Location (with icons)
   {\sffamily\small\color{muted}
     \href{tel:+353894546468}{\color{accent}\faPhone\color{muted}\ +353 89 454 6468}
     \quad\textbullet\quad
-    \href{https://www.google.com/maps/place/Dublin,+Ireland}{\color{accent}\faMapMarker\color{muted}\ Dublin, Ireland}
+    \href{https://www.google.com/maps/place/Dublin,+Ireland}{\color{accent}\faMapMarker\ Dublin, Ireland}
   }
 \end{center}
-
-\clrule
+\par\noindent\textcolor{accent}{\rule{\linewidth}{2.5pt}}\par\nopagebreak\vspace{0.28cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  OPENING — Lead with a concrete, quantified DevOps win; name EverDish early
+%  SALUTATION
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
-{\color{secondary}\sffamily\small
+{\sffamily\small
   Dear Hiring Manager,
 }
 
 \vspace{0.22cm}
 
-\noindent%
-{\color{secondary}\sffamily\small
-  I am applying for the \textbf{Product Manager} role at \textbf{EverDish}. In my most recent IT consulting engagement, I \textbf{reduced a client's manual deployment effort by 80\%} via a CI/CD pipeline redesign --- cutting release cycles from 2 days to \textbf{15 minutes}. Beyond DevOps, I have authored \textbf{product requirement documents (PRDs), user stories, and functional specifications} for international enterprise clients including \textbf{Decathlon}, \textbf{Splio}, and \textbf{YumChina}. I use \textbf{Claude daily} to accelerate PRD drafting and product decision-making, and I am excited to bring that same delivery-focused, product-minded approach to EverDish's platform.
+% ─────────────────────────────────────────────────────────────────────────────
+%  OPENING — Lead with a concrete, quantified DevOps win + section header
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Driving measurable operational wins at scale}
+\nopagebreak\noindent%
+{\sffamily\small\setstretch{1.06}
+  I redesigned enterprise \textbf{CI/CD pipelines} on \textbf{Linux} and \textbf{Azure} for retail and pharmaceutical clients, cutting manual deployment effort by \textbf{\color{accent}80\%} and security audit time by \textbf{\color{accent}60\%}. I bring that same automation-first engineering approach to EverDish --- with hands-on expertise in \textbf{Docker}, \textbf{Kubernetes}, \textbf{Terraform}, \textbf{GitHub Actions}, and AI workflow automation (Claude, n8n) --- plus two years of IT consulting for international enterprise clients including Decathlon, Splio, and YumChina.
 }
 
-\vspace{0.28cm}
+\vspace{0.26cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  BODY 1 — Cross-functional coordination & PRD experience
+%  BODY 1 — Cross-functional coordination & PRD experience (with metrics)
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent\textbf{\sffamily\small\color{primary}Cross-functional delivery at enterprise scale}\\[0.08cm]
-\noindent%
-{\color{secondary}\sffamily\small
-  At \textbf{InsightSec}, I managed concurrent consulting engagements for \textbf{Decathlon} (France), \textbf{Splio} (France), and \textbf{YumChina} (China) --- authoring \textbf{PRDs, user stories, functional specifications, and test case documentation} as a core part of each engagement. I ran \textbf{sprint planning} sessions, facilitated cross-functional stand-ups, and coordinated developers, designers, and external stakeholders across multiple time zones throughout the full \textbf{product delivery cycle}. I understand what it takes to align technical teams around a shared \textbf{product roadmap}, and I am prepared to do the same for EverDish's engineering and restaurant-operations teams from day one.
+\section*{Delivering across time zones, disciplines, and stakeholder levels}
+\nopagebreak\noindent%
+{\sffamily\small\setstretch{1.06}
+  At InsightSec I authored functional specifications, user stories, and test case documentation across 3 concurrent client engagements --- managing Decathlon (France), Splio (France), and YumChina (China) simultaneously. I ran sprint planning sessions, facilitated cross-functional stand-ups, and aligned developers, designers, and external stakeholders throughout the full delivery cycle across multiple time zones, delivering all concurrent engagements on schedule. For EverDish, I am prepared to bridge the same gap between engineering ambition and restaurant-operations reality.
 }
 
-\vspace{0.28cm}
+\vspace{0.26cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  BODY 2 — AI tools + workflow automation
+%  BODY 2 — AI tools + workflow automation (DevOps angle → product speed)
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent\textbf{\sffamily\small\color{primary}AI as a multiplier for product velocity}\\[0.08cm]
-\noindent%
-{\color{secondary}\sffamily\small
-  I use \textbf{Claude daily} for code review, PRD drafting, and structuring product decisions. I have built \textbf{automated workflows with n8n and OpenClaw} that orchestrate multi-platform processes without manual intervention --- directly improving team throughput. For EverDish, I see immediate applications: synthesizing \textbf{voice-of-customer data} from support channels into actionable backlog items, accelerating feature specification drafting, and automating competitive analysis. I want to build \textbf{AI-native product processes} from day one, not retrofit them later.
+\section*{Applying AI as a practical multiplier}
+\nopagebreak\noindent%
+{\sffamily\small\setstretch{1.06}
+  I use \textbf{Claude daily} for code review, PRD drafting, and structuring product decisions. I have built automated \textbf{AI workflows} with \textbf{n8n} and \textbf{OpenClaw} that orchestrate multi-platform processes without manual intervention. For EverDish, I see concrete near-term applications: synthesizing voice-of-customer data from support channels into actionable backlog items, accelerating feature specification, and automating competitive analysis.
 }
 
-\vspace{0.28cm}
+\vspace{0.26cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  BODY 3 — Restaurant/ops experience
+%  BODY 3 — Restaurant/ops experience relevant to EverDish's B2B SaaS product
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent\textbf{\sffamily\small\color{primary}Operational empathy for restaurant users}\\[0.08cm]
-\noindent%
-{\color{secondary}\sffamily\small
-  Before software, I managed e-commerce fulfillment across \textbf{Amazon and Shopify} (\textbf{200+ orders/week} during peak seasons) and retail store operations with direct customer interactions in \textbf{three languages}. This gives me an intuitive understanding of how operators think --- the priority of speed at peak hours, the pain of fragmented order channels, and the need for tools that are \textbf{reliable first and smart second}. I know what it means when a system goes down during a dinner rush, and that shapes how I approach \textbf{reliability-first roadmap decisions}.
+\section*{Understanding what reliability means at dinner rush}
+\nopagebreak\noindent%
+{\sffamily\small\setstretch{1.06}
+  Before software, I managed real operations: e-commerce fulfillment across Amazon and Shopify, processing \textbf{200+ orders/week} during peak seasons across three warehouse locations; retail store management; and direct customer interactions in multiple languages. This gives me an intuitive understanding of how restaurant operators think --- the priority of speed at peak hours, the pain of fragmented order channels, and the need for tools that are reliable first and smart second. That directly informs how I approach reliability-first roadmap decisions.
 }
 
-\vspace{0.28cm}
+\vspace{0.26cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
-%  BODY 4 — Why EverDish + differentiation
+%  BODY 4 — Why EverDish + language skills + differentiation close
 % ─────────────────────────────────────────────────────────────────────────────
-\noindent\textbf{\sffamily\small\color{primary}Why EverDish, and why now}\\[0.08cm]
-\noindent%
-{\color{secondary}\sffamily\small
-  EverDish is solving a real, underserved problem for restaurant operators in the Irish market --- and the chance to build a product that staff rely on, not just tolerate, is what draws me to this role. I bring a differentiated combination: \textbf{technical DevOps credibility} to earn trust from EverDish's engineering team, \textbf{operational experience} to represent restaurant users authentically, and a track record of delivering complex, multi-stakeholder projects on schedule. As a \textbf{fluent Chinese and English speaker} with working proficiency in Hungarian, I am particularly well-positioned to support EverDish's cross-market ambitions.
+\section*{Why EverDish, why now, why me}
+\nopagebreak\noindent%
+{\sffamily\small\setstretch{1.06}
+  EverDish is solving a real, underserved problem for restaurant operators --- and the chance to build a product that staff rely on, not just tolerate, is what draws me to this role. I bring a differentiated combination: \textbf{technical DevOps credibility} (CI/CD, Docker, Kubernetes, Terraform, Azure) to earn trust from EverDish's engineering team, \textbf{operational empathy} from real operations experience to represent restaurant users authentically, and a track record of delivering complex, multi-stakeholder projects on schedule. I am fluent in \textbf{Chinese and English}, with working proficiency in Hungarian. I would welcome the opportunity to discuss how my background aligns with EverDish's needs.
 }
 
-\vspace{0.32cm}
+\vspace{0.22cm}
 
 % ─────────────────────────────────────────────────────────────────────────────
 %  CLOSING
 % ─────────────────────────────────────────────────────────────────────────────
 \noindent%
-{\color{secondary}\sffamily\small
-  I am excited about contributing to EverDish's product journey and would welcome the opportunity to discuss how my background aligns with your needs. Thank you for your time and consideration.
+{\sffamily\small
+  Thank you for your time and consideration.
 }
 
-\vspace{0.28cm}
+\vspace{0.20cm}
 
 \noindent%
-{\color{secondary}\sffamily\small
+{\sffamily\small
   Best regards,
 }
 
