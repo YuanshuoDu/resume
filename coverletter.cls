@@ -25,7 +25,7 @@
 % ── Color palette (matches simpleresume.cls) ─────────────────────────────────
 \definecolor{primary}{RGB}{15,23,42}       % Slate-900 — headings
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — accent bars, links
-\definecolor{accentmid}{RGB}{147,197,253}  % Blue-300 — divider accent
+\definecolor{accentmid}{RGB}{59,130,246}   % Blue-500 — divider accent (WCAG AA on white)
 \definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — body text
 \definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, meta
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — dividers
@@ -49,9 +49,9 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt){%
-      \textcolor{headerbar}{\rule{\paperwidth}{4pt}}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{2pt}}}%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1.5pt}}}%
+      \textcolor{headerbar2}{\rule{\paperwidth}{0.5pt}}}%
   }%
 }
 

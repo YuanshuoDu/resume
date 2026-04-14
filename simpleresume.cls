@@ -27,7 +27,7 @@
 % ── Professional color palette ────────────────────────────────────────────────
 \definecolor{primary}{RGB}{15,23,42}       % Slate-900 — headings
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — bullets, links, accent bars
-\definecolor{accentmid}{RGB}{96,165,250}  % Blue-400 — raised contrast for header rule
+\definecolor{accentmid}{RGB}{59,130,246}  % Blue-500 — raised contrast for header rule (WCAG AA on white)
 \definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — company names, meta
 \definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, secondary labels
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
