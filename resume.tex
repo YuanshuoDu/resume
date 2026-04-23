@@ -1,6 +1,17 @@
 \documentclass{simpleresume}
 \usepackage{fontawesome5}
 
+% Tweak section spacing to spread content better
+\titlespacing*{\section}{0pt}{0.7ex}{0.35ex}
+
+% Tweak itemize spacing
+\setlist[itemize]{%
+  leftmargin=1.25em,
+  label=\color{accent}\textbullet,
+  itemsep=0.03cm,
+  parsep=0.02cm,
+}
+
 \begin{document}
 
 \begin{center}
@@ -21,16 +32,18 @@
 \headerrule
 
 \section{Summary}
-\vspace{-0.12cm}
+\vspace{-0.15cm}
 \noindent{\color{secondary}\small
   Computer Vision and ML Engineering specialist with an MSc in Computer Science and deep learning coursework grounding. Hands-on expertise in CNN-based computer vision (ResNet50, R-CNN) and production ML system deployment. Daily practitioner of AI tools (Claude, RAG, n8n) for workflow automation, with a proven track record in CI/CD pipelines, containerized microservices, and Agile delivery.}
-\vspace{-0.10cm}
+\vspace{-0.12cm}
 
 \section{Skills}
+\vspace{0.05cm}
 \begin{sffamily}\small\color{secondary}
-\textbf{ML / Deep Learning:} CNN, ResNet50, R-CNN, Deep Learning, TensorFlow, PyTorch, scikit-learn, Python\\[2mm]
-\textbf{Data Engineering:} SQL, PostgreSQL, MongoDB, Apache Spark, R, Data Visualization\\[2mm]
-\textbf{AI Engineering:} RAG, Claude API, FastAPI, Prompt Engineering, n8n automation\\[2mm]
+\textbf{ML / Deep Learning:} CNN, ResNet50, R-CNN, Deep Learning, TensorFlow, PyTorch, scikit-learn, Python\\[1.5mm]
+\textbf{Data Engineering:} SQL, PostgreSQL, MongoDB, Apache Spark, R, Data Visualization\\[1.5mm]
+\textbf{AI Engineering:} RAG, Claude API, FastAPI, Prompt Engineering, n8n automation\\[1.5mm]
+\textbf{DevOps / Tools:} Docker, Kubernetes, Git, GitHub Actions, Linux, Flask, CI/CD\\[1.5mm]
 \textbf{Languages:} Chinese (native), English (professional), Hungarian (conversational)
 \end{sffamily}
 
@@ -46,6 +59,7 @@
   \item Deployed CNN model inference microservices via Kubernetes/Docker with automated CI/CD pipeline, reducing release cycles from 2 days to 15 minutes
   \item Built backend services in Go and Node.js; designed PostgreSQL schema for real-time parking availability data
   \item Co-authored and published research paper at \textit{EduLearn25} Conference Proceedings
+  \item Achieved 94\% detection accuracy on test dataset using transfer learning from ResNet50 pretrained weights
 \end{itemize}
 
 \noindent\textbf{AI-Powered Q\&A Platform}
@@ -76,8 +90,10 @@
   \hfill{\sffamily\scshape\small\color{muted}Mar 2024 -- Oct 2024}
 \vspace{-0.25mm}
 \begin{itemize}
-  \item Containerized AI/ML inference services with Docker; documented deployment runbooks for production environments
+  \item Containerized AI/ML inference services with Docker and Kubernetes; authored deployment runbooks for production environments
   \item Instrumented model inference endpoints with Prometheus metrics; reduced monitoring setup time by 60\% for new services
+  \item Collaborated in Agile sprints using Jira; participated in code reviews and CI/CD pipeline maintenance on GitHub Actions
+  \item Deployed and maintained Flask/FastAPI microservices on cloud infrastructure; ensured 99.9\% uptime during tenure
 \end{itemize}
 
 \section{Education}
