@@ -1,0 +1,46 @@
+%% sourcesanspro.sty — modern sans-serif: Lato (bundled) for XeLaTeX, lmodern for pdflatex
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sourcesanspro}[2024]
+
+% Detect XeLaTeX / LuaLaTeX
+\@ifpackageloaded{fontspec}{%
+  % fontspec already loaded — skip re-loading
+  \ProvidesPackage{sourcesanspro}[2024 fontspec already loaded]
+}{%
+  % pdfTeX: use scalable lmodern as sans-serif fallback
+  \RequirePackage{lmodern}
+  \RequirePackage[T1]{fontenc}
+  \let\sourcesanspro\sffamily
+  \let\sourcesansprolight\sffamily
+  \let\sourcesansprobold\sffamily
+  \let\sourcesansproit\sffamily
+  \let\sourcesansprobfit\sffamily
+  \endinput
+}
+
+% ── XeLaTeX path: use Lato (bundled in fonts/ directory) ─────────────────────
+\RequirePackage{fontspec}
+
+% Silently ignore all options
+\DeclareOption*{}
+\ProcessOptions\relax
+
+% Set Lato as the default sans-serif font
+\setsansfont[Path=fonts/]{Lato}[
+  FontFace={l}{n}{Lato-Light},
+  FontFace={l}{it}{Lato-LightItalic},
+  FontFace={m}{n}{Lato-Regular},
+  FontFace={m}{it}{Lato-Italic},
+  FontFace={sb}{n}{Lato-Semibold},
+  FontFace={sb}{it}{Lato-SemiboldItalic},
+  FontFace={b}{n}{Lato-Bold},
+  FontFace={b}{it}{Lato-BoldItalic},
+  Scale=MatchLowercase
+]
+
+% Alias sourcesanspro commands to the sans-serif family
+\let\sourcesanspro\sffamily
+\let\sourcesansprolight\sffamily
+\let\sourcesansprobold\sffamily
+\let\sourcesansproit\sffamily
+\let\sourcesansprobfit\sffamily

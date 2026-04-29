@@ -1,0 +1,62 @@
+%% fontawesome6.sty - uses system FontAwesome 4 font (system fonts-font-awesome package)
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fontawesome6}[2024 FA6 using system FontAwesome 4]
+
+\RequirePackage{fontspec}
+\RequirePackage{accsupp}
+
+% Use system FontAwesome font - xelatex can find it via fc-list
+\newfontfamily\FAFamily{Font Awesome 6 Free}
+\newfontfamily\FAbrands{Font Awesome 6 Brands}
+
+% \faAlt{template}{icon}{text} -> icon followed by text
+\def\faAlt#1#2#3{%
+  \BeginAccSupp{ActualText={#1}}#2#3\EndAccSupp}
+
+% All icon definitions using FontAwesome 4 Unicode mapping
+\def\faBirthdayCake{{\FAFamily\symbol{"F1FD}}}
+\def\faBitbucket{{\FAFamily\symbol{"F171}}}
+\def\faBitbucketSquare{{\FAFamily\symbol{"F171}}}
+\def\faCakeCandles{{\FAFamily\symbol{"F1FD}}}
+\def\faEnvelope{{\FAFamily\symbol{"F0E0}}}
+\def\faEnvelopeO{{\FAFamily\symbol{"F003}}}
+\def\faExternalLink{{\FAFamily\symbol{"F08E}}}
+\def\faExternalLinkSquare{{\FAFamily\symbol{"F14C}}}
+\def\faGithub{{\FAFamily\symbol{"F092}}}
+\def\faGithubAlt{{\FAFamily\symbol{"F113}}}
+\def\faGithubSquare{{\FAFamily\symbol{"F092}}}
+\def\faGitlab{{\FAFamily\symbol{"F296}}}
+\def\faGlobe{{\FAFamily\symbol{"F0AC}}}
+\def\faGraduationCap{{\FAFamily\symbol{"F19D}}}
+\def\faHome{{\FAFamily\symbol{"F015}}}
+\def\faHouseChimney{{\FAFamily\symbol{"F015}}}
+\def\faKaggle{{\FAFamily\symbol{"F259}}}
+\def\faLinkedin{{\FAFamily\symbol{"F08C}}}
+\def\faLinkedinSquare{{\FAFamily\symbol{"F08C}}}
+\def\faMastodon{{\FAFamily\symbol{"F4F6}}}
+\def\faMedium{{\FAFamily\symbol{"F23A}}}
+\def\faMobile{{\FAFamily\symbol{"F10C}}}
+\def\faMobilePhone{{\FAFamily\symbol{"F10C}}}
+\def\faOrcid{{\FAFamily\symbol{"F337}}}
+\def\faPaperPlane{{\FAFamily\symbol{"F1D8}}}
+\def\faPaperPlaneO{{\FAFamily\symbol{"F1D9}}}
+\def\faPhone{{\FAFamily\symbol{"F095}}}
+\def\faReddit{{\FAFamily\symbol{"F281}}}
+\def\faRedditAlien{{\FAFamily\symbol{"F281}}}
+\def\faRedditSquare{{\FAFamily\symbol{"F281}}}
+\def\faResearchgate{{\FAFamily\symbol{"F336}}}
+\def\faSkype{{\FAFamily\symbol{"F17E}}}
+\def\faStackOverflow{{\FAFamily\symbol{"F16C}}}
+\def\faTelegram{{\FAFamily\symbol{"F2C6}}}
+\def\faTwitter{{\FAFamily\symbol{"F099}}}
+\def\faTwitterSquare{{\FAFamily\symbol{"F099}}}
+\def\faTwitterX{{\FAFamily\symbol{"F099}}}
+\def\faWeb{{\FAFamily\symbol{"F080}}}
+\def\faWebsite{{\FAFamily\symbol{"F080}}}
+\def\faXing{{\FAFamily\symbol{"F168}}}
+\def\faXingSquare{{\FAFamily\symbol{"F169}}}
+\def\faXTwitter{{\FAFamily\symbol{"F099}}}
+\def\faSquareGithub{{\FAFamily\symbol{"F092}}}
+\def\faSquareTwitter{{\FAFamily\symbol{"F099}}}
+\def\faSquareWhatsapp{{\FAFamily\symbol{"F232}}}
+\def\faSquareXing{{\FAFamily\symbol{"F169}}}

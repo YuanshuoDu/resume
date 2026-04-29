@@ -1,0 +1,56 @@
+%% fontawesome5.sty — XeLaTeX + pdflatex compatible
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fontawesome5}[2024]
+
+% XeLaTeX detection
+\expandafter\ifx\csname XeTeXrevision\endcsname\relax
+  % === pdflatex stubs ===
+  \providecommand\newfontfamily[2][]{}
+  \providecommand\symbol[1]{\textbf{?}}
+  \def\faGithub{{\sffamily GitHub}}
+  \def\faGithubAlt{{\sffamily GitHub}}
+  \def\faLinkedin{{\sffamily LinkedIn}}
+  \def\faLinkedinSquare{{\sffamily LinkedIn}}
+  \def\faTwitter{{\sffamily Twitter}}
+  \def\faTwitterSquare{{\sffamily Twitter}}
+  \def\faTwitterX{{\sffamily X}}
+  \def\faEnvelope{{\sffamily Email}}
+  \def\faPhone{{\sffamily Tel}}
+  \def\faMapMarker{{\sffamily Location}}
+  \def\faExternalLinkAlt{{\sffamily Link}}
+  \def\faGlobe{{\sffamily Globe}}
+  \def\faCheck{{\sffamily OK}}
+  \def\faCode{{\sffamily [Code]}}
+  \def\faShieldHalved{{\sffamily [Sec]}}
+  \def\faCertificate{{\sffamily [Cert]}}
+  \def\faClock{{\sffamily [4+]}}
+\else
+  % === XeLaTeX: FA6 OTF from fonts/ dir ===
+  \RequirePackage{fontspec}
+  \newfontfamily\FAicons
+    [Path=/usr/share/fonts/opentype/,Extension=.otf,UprightFont={Font Awesome 6 Free-Solid-900}]
+    {FontAwesome6FreeSolid900}
+  \newfontfamily\FAbrands
+    [Path=/usr/share/fonts/opentype/,Extension=.otf,UprightFont={Font Awesome 6 Brands-Regular-400}]
+    {FontAwesome6BrandsRegular400}
+
+  % Use \leavevmode to avoid color stack issues with font switches
+  \def\faCode{{\FAicons\leavevmode\symbol{"F121}}}
+  \def\faShieldHalved{{\FAicons\leavevmode\symbol{"F6E9}}}
+  \def\faCertificate{{\FAicons\leavevmode\symbol{"F0A3}}}
+  \def\faClock{{\FAicons\leavevmode\symbol{"F017}}}
+  \def\faEnvelope{{\FAicons\leavevmode\symbol{"F0E0}}}
+  \def\faPhone{{\FAicons\leavevmode\symbol{"F095}}}
+  \def\faMapMarker{{\FAicons\leavevmode\symbol{"F3C5}}}
+  \def\faGlobe{{\FAicons\leavevmode\symbol{"F0AC}}}
+  \def\faCheck{{\FAicons\leavevmode\symbol{"F00C}}}
+  \def\faExternalLinkAlt{{\FAicons\leavevmode\symbol{"F35D}}}
+
+  \def\faGithub{{\FAbrands\leavevmode\symbol{"F09B}}}
+  \def\faGithubAlt{{\FAbrands\leavevmode\symbol{"F113}}}
+  \def\faLinkedin{{\FAbrands\leavevmode\symbol{"F08C}}}
+  \def\faLinkedinSquare{{\FAbrands\leavevmode\symbol{"F08C}}}
+  \def\faTwitter{{\FAbrands\leavevmode\symbol{"F099}}}
+  \def\faTwitterSquare{{\FAbrands\leavevmode\symbol{"F081}}}
+  \def\faTwitterX{{\FAbrands\leavevmode\symbol{"E61F}}}
+\fi
