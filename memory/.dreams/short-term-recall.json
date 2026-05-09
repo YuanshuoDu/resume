@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-09T22:15:22.814Z",
+  "entries": {
+    "memory:memory/2026-05-06.md:1:6": {
+      "key": "memory:memory/2026-05-06.md:1:6",
+      "path": "memory/2026-05-06.md",
+      "startLine": 1,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "## Backup Cron Job Failed - Cron job `daily-backup-2` (8:00 PM daily) failed because the backup script doesn't exist - Path referenced: `/root/.openclaw/workspace/skills/openclaw-backup/scripts/backup.sh` - User has been notified via Feishu",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.273795103446276,
+      "maxScore": 0.636897551723138,
+      "firstRecalledAt": "2026-05-06T22:15:17.595Z",
+      "lastRecalledAt": "2026-05-09T22:15:22.814Z",
+      "queryHashes": [
+        "a4cbe249bf7c",
+        "532759798cfc"
+      ],
+      "recallDays": [
+        "2026-05-06",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "backup",
+        "daily-backup-2",
+        "cron",
+        "job",
+        "failed",
+        "script",
+        "doesn't",
+        "exist"
+      ]
+    }
+  }
+}
