@@ -55,15 +55,15 @@
 }{%
   \llap{\color{accent}\rule[0.15ex]{2.5pt}{0.95em}\hspace{0.28em}}% left accent bar
 }{0em}{}
-\titlespacing*{\section}{0pt}{0.85ex}{0.4ex}
+\titlespacing*{\section}{0pt}{0.5ex}{0.25ex}
 
 % ── Itemize: compact with accent bullets ─────────────────────────────────────
 \setlist{noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt}
 \setlist[itemize]{%
   leftmargin=1.25em,
   label=\color{accent}\textbullet,
-  itemsep=0.06cm,
-  parsep=0.03cm,
+  itemsep=0.03cm,
+  parsep=0.01cm,
 }
 
 % ── Page top accent bar with subtle gradient strip ───────────────────────────
