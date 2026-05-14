@@ -4,11 +4,13 @@
 \LoadClass{article}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{geometry}
+\RequirePackage{changepage}
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 \RequirePackage{eso-pic}
+\RequirePackage{setspace}
 \RequirePackage{array}
 \RequirePackage{fancyhdr}
 \RequirePackage{ragged2e}
@@ -25,7 +27,7 @@
 % ── Professional color palette ────────────────────────────────────────────────
 \definecolor{primary}{RGB}{15,23,42}       % Slate-900 — headings
 \definecolor{accent}{RGB}{37,99,235}       % Blue-600 — bullets, links, accent bars
-\definecolor{accentmid}{RGB}{147,197,253}  % Blue-300 — divider accent
+\definecolor{accentmid}{RGB}{59,130,246}  % Blue-500 — raised contrast for header rule (WCAG AA on white)
 \definecolor{secondary}{RGB}{51,65,85}     % Slate-700 — company names, meta
 \definecolor{muted}{RGB}{100,116,139}      % Slate-500 — dates, secondary labels
 \definecolor{rule}{RGB}{226,232,240}       % Slate-200 — light dividers
@@ -70,10 +72,10 @@
 \AtBeginDocument{%
   \AddToShipoutPictureFG{%
     \put(0,\dimexpr\paperheight-\topmargin-1in-8pt\relax){%
-      \textcolor{headerbar}{\rule{\paperwidth}{3pt}}%
+      \textcolor{headerbar}{\rule{\paperwidth}{2pt}}%
     }%
-    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-2pt\relax){%
-      \textcolor{headerbar2}{\rule{\paperwidth}{1pt}}%
+    \put(0,\dimexpr\paperheight-\topmargin-1in-8pt-1.5pt\relax){%
+      \textcolor{headerbar2}{\rule{\paperwidth}{0.5pt}}%
     }%
   }%
 }

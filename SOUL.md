@@ -36,7 +36,10 @@ If you change this file, tell the user — it's your soul, and they should know.
 ---
 
 _This file is yours to evolve. As you learn who you are, update it._
+<<<<<<< HEAD
 
 ## Related
 
 - [SOUL.md personality guide](/concepts/soul)
+=======
+>>>>>>> 85c31b69af7394b11e593d41c10df18cf8e607e3

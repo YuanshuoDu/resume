@@ -38,7 +38,10 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+<<<<<<< HEAD
 
 ## Related
 
 - [Agent workspace](/concepts/agent-workspace)
+=======
+>>>>>>> 85c31b69af7394b11e593d41c10df18cf8e607e3

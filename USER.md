@@ -15,7 +15,10 @@ _(What do they care about? What projects are they working on? What annoys them? 
 ---
 
 The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+<<<<<<< HEAD
 
 ## Related
 
 - [Agent workspace](/concepts/agent-workspace)
+=======
+>>>>>>> 85c31b69af7394b11e593d41c10df18cf8e607e3
